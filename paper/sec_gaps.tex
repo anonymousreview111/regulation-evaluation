@@ -11,9 +11,9 @@ The requirements most tightly coupled to the technical literature are those fram
 measurable trustworthiness characteristics: accuracy and performance, robustness,
 security, explainability, and fairness. These correspond to NIST \textsc{Measure}~2.x,
 EU AI Act Article~15, and the ISO/IEC~42001 verification-and-validation control. The
-omnibus technical requirements that draw on several method families at once---EU
+omnibus technical requirements that draw on several method families at once, namely EU
 Article~15 (accuracy, robustness, and cybersecurity) and ISO/IEC~42001 A.6.2.4
-(verification and validation)---reach the highest evidentiary coverage in our scheme
+(verification and validation), reach the highest evidentiary coverage in our scheme
 (``broad'' in Table~\ref{tab:gap}), while each individual trustworthiness characteristic
 has primary relevance from one or more established method families. For systems built from
 well-studied model classes on tabular or vision data, a deployer can today assemble
@@ -21,14 +21,14 @@ strong conformity evidence for these obligations using off-the-shelf methods.
 
 \subsection{Process obligations: a definitional boundary, not a methods gap}
 A first category is a structural boundary rather than a deficiency in the literature.
-Obligations written as \emph{processes}---NIST \textsc{Govern}, EU AI Act Article~9 (the
-risk-management system), and the ISO/IEC~42001 management-system clauses---are, by design,
+Obligations written as \emph{processes}, such as NIST \textsc{Govern}, EU AI Act Article~9 (the
+risk-management system), and the ISO/IEC~42001 management-system clauses, are, by design,
 not the kind of thing any single technical evaluation can satisfy. This is not an absence
 of methods: documentation (M8, M9) and monitoring (M11) supply substantial evidence
 \emph{inputs} to these processes, and the matrix records those supporting and primary
 contributions. What process obligations require in addition is an organizational process
 that integrates the technical evidence; the ``gap'' is therefore the need for such
-integration, not missing measurement. We flag this so practitioners do not mistake a strong
+integration, not missing measurement. We note this so practitioners do not mistake a strong
 benchmark report for conformity with a process obligation, and we reserve the term
 \emph{gap} (below) for requirements that genuinely lack primary-relevance technical methods.
 
@@ -45,8 +45,8 @@ but few standardized, quantitative evaluation instruments.
 
 \subsection{The agentic measurement gap}
 A significant and rapidly growing gap is created by the shift from models to agents.
-Current evaluation methods overwhelmingly grade \emph{outputs}---the text a model emits in
-response to a probe---whereas the risks of autonomous, tool-using systems arise from
+Current evaluation methods overwhelmingly grade \emph{outputs} (the text a model emits in
+response to a probe), whereas the risks of autonomous, tool-using systems arise from
 \emph{actions}: which tools are invoked, which sub-agents are delegated to, how a plan
 allocates resources. This is not a speculative concern: independent work shows that a
 system near-parity on a question-answering fairness benchmark can still act with disparity

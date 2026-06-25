@@ -11,7 +11,7 @@ they measure? \textbf{RQ2.} Which technical evaluation method could \emph{suppor
 evidentiary case for conformity} with which requirement of (a)~the NIST AI RMF~1.0,
 (b)~the EU AI Act high-risk obligations (Articles~9--15), and (c)~ISO/IEC~42001:2023, and
 with what strength of \emph{technical relevance}? \textbf{RQ3.} Which requirements are
-weakly served or unserved by technical evaluation methods---i.e., where is the
+weakly served or unserved by technical evaluation methods, that is, where is the
 \emph{measurement gap}?
 
 \subsection{Scope}
@@ -35,7 +35,7 @@ calibration, data governance, model card, human oversight, monitoring), plus a d
 governance string. The search window was 2015--2026 with an LLM/agentic emphasis on
 2022--2026; the language was English; the last search was conducted in June~2026.
 Table~\ref{tab:search} lists the concept groups, and the per-database Boolean query
-strings---with the term groups defined and substituted for each database---and the search
+strings (with the term groups defined and substituted for each database) and the search
 dates are released for reproducibility in the companion artifact. As a transparency check, a
 June~2026 re-run of the governance$\times$evaluation query on arXiv returned 168 records; the
 original per-database candidate yields were not separately retained, and Scopus and Web of
@@ -90,11 +90,11 @@ Mapping proceeded in three passes. (1)~\emph{Family assignment}: each method is 
 primary family and optional secondary families. (2)~\emph{Requirement mapping}: for every
 (method, requirement) pair we assign a technical-relevance level grounded in the official
 clause text. \emph{Primary} (\direct): the method produces an artifact that the requirement
-chiefly asks for---e.g., an adversarial-robustness report for the EU AI Act Article~15
+chiefly asks for, for example an adversarial-robustness report for the EU AI Act Article~15
 robustness facet. \emph{Supporting} (\partialev): the artifact feeds a required outcome or
-document but is insufficient alone---e.g., a benchmark result is an input to the Article~9
+document but is insufficient alone, as when a benchmark result is an input to the Article~9
 risk-management system but does not constitute it. \emph{Contextual} (\indirect): the
-artifact informs the requirement without serving as its evidence---e.g., interpretability
+artifact informs the requirement without serving as its evidence, as when interpretability
 analysis informs governance documentation. A blank denotes non-applicability. The
 supporting-versus-blank boundary for process obligations is decided by whether the method's
 output is a named input to the obligation's process (supporting) or not (blank).
@@ -126,8 +126,8 @@ Cohen's $\kappa=0.23$ and a quadratically-weighted $\kappa=0.49$ (computed on th
 relevance scale, here including a single not-applicable code); as in the in-team check, all
 17 disagreements were a single adjacency level apart, with \emph{no}
 primary$\leftrightarrow$contextual conflicts. The external recoding
-reproduces the same pattern---modest exact agreement on the fine ordinal scale, reliable
-separation of strong from weak relevance---which supports presenting the crosswalk as a
+reproduces the same pattern (modest exact agreement on the fine ordinal scale, reliable
+separation of strong from weak relevance), which supports presenting the crosswalk as a
 \emph{proposed}, externally-checked artifact; broader multi-expert validation would
 strengthen it further (Section~\ref{sec:limits}). Both the second-coder and external-validator
 cell-level ledgers (\texttt{coding\_audit.csv}, \texttt{external\_validation.csv}) are

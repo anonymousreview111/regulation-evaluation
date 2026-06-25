@@ -6,7 +6,7 @@ visualized in Fig.~\ref{fig:heatmap}.
 
 \subsection{Technical-relevance coding}
 For each (method family, requirement) pair we assign one of three levels of \emph{technical
-relevance}---how far the method's output could contribute to an evidentiary case for the
+relevance}, capturing how far the method's output could contribute to an evidentiary case for the
 requirement, grounded in the official clause text. We code \emph{relevance}, not legal
 sufficiency: a technical artifact rarely demonstrates conformity by itself, its adequacy
 depending on intended purpose, applicable harmonised standards, acceptance criteria, and the
@@ -42,10 +42,10 @@ subcategory numbering (notably 2.3 performance, 2.5 validity and reliability, 2.
 2.7 security and resilience, 2.8 transparency and accountability, 2.9 explainability and
 interpretability, 2.10 privacy, and 2.11 fairness and harmful bias managed). The matrix columns cover the
 trustworthiness-characteristic subcategories most directly tied to technical evaluation;
-the remaining subcategories---\textsc{Measure}~2.1 (test
-documentation), 2.2 (human-subject evaluations), 2.4 (in-production monitoring), 2.5
-(validity and reliability), 2.8 (transparency and accountability), 2.12 (environmental
-impact), and 2.13 (measurement effectiveness)---are addressed through the accuracy (2.3),
+the remaining subcategories (\textsc{Measure}~2.1, test
+documentation; 2.2, human-subject evaluations; 2.4, in-production monitoring; 2.5,
+validity and reliability; 2.8, transparency and accountability; 2.12, environmental
+impact; and 2.13, measurement effectiveness) are addressed through the accuracy (2.3),
 documentation (M8, M9), monitoring (M11), and governance rows rather than as separate
 columns. The mapping is correspondingly densest in the \textsc{Measure} function.
 Performance and benchmarking (M1) is primarily relevant to \textsc{Measure}~2.3
@@ -58,7 +58,7 @@ interpretability (M6) is primarily relevant to \textsc{Measure}~2.9 (explainabil
 interpretability)~\cite{lundberg2017shap,ribeiro2016lime}; and fairness evaluation (M2)
 is primarily relevant to \textsc{Measure}~2.11 (fairness and harmful bias
 managed)~\cite{parrish2022bbq,gallegos2024bias}; and privacy evaluation (M12)
-has \emph{supporting} relevance to \textsc{Measure}~2.10 (privacy)---its membership-inference,
+has \emph{supporting} relevance to \textsc{Measure}~2.10 (privacy): its membership-inference,
 extraction, and differential-privacy methods detect leakage and bound risk but do not by
 themselves assure privacy adequacy~\cite{shokri2017membership,carlini2021extracting,abadi2016dp}.
 Uncertainty and calibration (M7) has \emph{supporting} relevance to the accuracy and reliability
@@ -67,7 +67,7 @@ claims rather than producing the performance metric itself~\cite{guo2017calibrat
 \textsc{Govern} and \textsc{Map} functions, being organizational and contextual, are served
 only with \emph{supporting} or \emph{contextual} relevance: documentation families (M8, M9)
 are the most relevant here~\cite{mitchell2019modelcards,gebru2018datasheets},
-while \textsc{Manage}---ongoing risk treatment and monitoring---is chiefly served by
+while \textsc{Manage}, covering ongoing risk treatment and monitoring, is chiefly served by
 post-deployment monitoring and assurance (M11)~\cite{leest2025contextaware}. The pattern
 is clear: NIST's measurement-centric design aligns tightly with the technical literature,
 which is itself organized around measurable trustworthiness characteristics.
@@ -99,7 +99,7 @@ literature maps most directly onto the verification-and-validation control (A.6.
 which nearly every method family can evidence, and onto the data controls (A.7), served
 by M8. The AI-system impact-assessment controls (A.5) are substantially supported by
 fairness and safety evaluation (M2, M4) but, as with EU Article~9, retain a process
-character that technical methods only partly satisfy---hence those cells are coded
+character that technical methods only partly satisfy, so those cells are coded
 supporting rather than primary. The information-to-interested-parties control
 (A.8) is served by transparency documentation (M9), and operation-and-monitoring
 (A.6.2.6) by M11. Because ISO/IEC~42001 is explicitly designed to interoperate with risk
@@ -116,7 +116,7 @@ This convergence is the practical engine behind the practitioner playbook of
 Section~\ref{sec:discussion}: a single, well-designed evaluation dossier can serve
 multiple jurisdictions, provided it is explicitly cross-referenced to each framework's
 clauses. We stress that this convergence is an \emph{interpretive} claim of evidentiary
-compatibility---that the same artifact can satisfy the evidentiary need of each clause---and
+compatibility, namely that the same artifact can satisfy the evidentiary need of each clause, and
 not an assertion that the obligations are legally identical; their scope, thresholds, and
 legal force differ, and the alignments in Fig.~\ref{fig:crosswalk} should be read as
 reasoned correspondences rather than equivalences. The mapping matrix is, in effect, the
