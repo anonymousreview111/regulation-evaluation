@@ -41,3 +41,15 @@ Snowballing: forward/backward citation tracing of included records via Google Sc
 Official corpus (hand-collected, not via the above queries): NIST AI 100-1, NIST AI 600-1,
 EUR-Lex Reg. (EU) 2024/1689, ISO/IEC 42001:2023, ISO/IEC 23894:2023.
 Reused corpus: authors' prior arXiv-verified agent-fairness corpus (202 entries).
+
+--------------------------------------------------------------------------------
+Search reproduction (re-run June 2026, for transparency)
+  arXiv (cs.LG, cs.AI, cs.CY, cs.CR, stat.ML), governance x evaluation query
+    (GOV) AND (EVAL):  168 records (via the arXiv API).
+  The broad method query (SYSTEM AND EVAL AND METHOD) returns a much larger
+    pre-screening universe; the verified corpus reflects the structured per-family
+    search followed by title/abstract and full-text screening (see PRISMA figure).
+  Scopus and Web of Science require institutional access and were not re-runnable here.
+  IEEE Xplore and ACM Digital Library result counts vary with the web UI; the
+    per-database candidate yields from the original search were not separately retained.
+  These re-run counts are a reproducibility snapshot, not the original screening counts.
