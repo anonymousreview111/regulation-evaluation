@@ -25,10 +25,10 @@ its public Annex A control structure and secondary analyses.
   40 cells) with the neutral per-cell prompts the second coder saw, and no access to the
   first-pass codes.
 
-- **`external_validation.csv`** — the independent external-validation ledger: an external
-  reviewer (an external reviewer, ORCID [ORCID withheld]; not an author), blind to the first-pass
+- **`external_validation.csv`** — the external-validation ledger: an external
+  validator (an external validator, ORCID [ORCID withheld]; not an author), blind to the first-pass
   codes, recoded the same 40-cell sample. Columns give the first-pass code, the external code,
-  confidence, agreement flag, adjacency, and the reviewer's comment; the SUMMARY row reports
+  confidence, agreement flag, adjacency, and the validator's comment; the SUMMARY row reports
   57.5% exact / 85.8% adjacency-weighted agreement, Cohen's kappa 0.23, quadratically-weighted
   kappa 0.49.
 

@@ -39,4 +39,4 @@ C037,M8 Data quality/governance/docs,NIST AI RMF,MEASURE 2.10 privacy,supporting
 C038,M9 Transparency & model docs,EU AI Act,Article 9 risk management,contextual,supporting,medium,N,adjacent,Docs support the system; they are not the risk system.
 C039,M9 Transparency & model docs,NIST AI RMF,GOVERN function,supporting,supporting,high,Y,exact,
 C040,M9 Transparency & model docs,ISO/IEC 42001,A.6.2.4 verification & validation,contextual,supporting,medium,N,adjacent,Documentation records V&V evidence; it is not V&V.
-SUMMARY,external validator: an external reviewer (ORCID [ORCID withheld]) not an author,blind to first-pass codes,40-cell stratified sample,raw exact 23/40 = 57.5%,Cohen kappa 0.23,quadratically-weighted kappa 0.49 (chance-corrected ordinal measure),17 disagreements all one level apart (0 primary<->contextual),,
+SUMMARY,external validator: an external validator (ORCID [ORCID withheld]) not an author,blind to first-pass codes,40-cell stratified sample,raw exact 23/40 = 57.5%,Cohen kappa 0.23,quadratically-weighted kappa 0.49 (chance-corrected ordinal measure),17 disagreements all one level apart (0 primary<->contextual),,

@@ -73,11 +73,11 @@ coding/reliability ledger are released as Supplementary Information and in the c
 repository.
 
 \bmhead{Acknowledgements}
-%% Camera-ready: ``We thank an external reviewer (ORCID [ORCID withheld]), who is not an author,''
-We thank an external reviewer, independent of the author team (name and ORCID withheld for
-double-blind review), for independently recoding a stratified sample of the crosswalk---blind
-to the first-pass codes---as an external reliability check; the resulting agreement statistics
-are reported in Section~\ref{sec:method}.
+%% Camera-ready: ``We thank an external validator (ORCID [ORCID withheld]), who is not an author,''
+We thank an external validator, who is not an author of this study (name and ORCID withheld
+for double-blind review), for recoding a stratified sample of the crosswalk---blind to the
+first-pass codes---as an external reliability check; the resulting agreement statistics are
+reported in Section~\ref{sec:method}.
 
 \section*{Statements and Declarations}
 \textbf{Funding.} This work received no specific external funding.\\
