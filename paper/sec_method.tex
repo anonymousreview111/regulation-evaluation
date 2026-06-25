@@ -1,0 +1,159 @@
+This review follows a structured, transparent protocol for a \emph{methods-to-requirements}
+mapping. We frame it as a \emph{structured narrative (scoping) review} with a documented,
+reproducible search rather than a PRISMA systematic review: the central artifact is an
+interpretive crosswalk we make auditable, not a meta-analysis or exhaustive field
+enumeration. The protocol was fixed before corpus collection; the search, corpus, coding
+ledger, and matrix are released so the synthesis is inspectable.
+
+\subsection{Review Questions}
+\textbf{RQ1.} What technical AI evaluation and assessment methods exist, organized by what
+they measure? \textbf{RQ2.} Which technical evaluation method could \emph{support an
+evidentiary case for conformity} with which requirement of (a)~the NIST AI RMF~1.0,
+(b)~the EU AI Act high-risk obligations (Articles~9--15), and (c)~ISO/IEC~42001:2023, and
+with what strength of \emph{technical relevance}? \textbf{RQ3.} Which requirements are
+weakly served or unserved by technical evaluation methods---i.e., where is the
+\emph{measurement gap}?
+
+\subsection{Scope}
+We include high-risk and high-stakes AI/ML systems, including large language models (LLMs)
+and agentic systems; technical evaluation methods that yield artifacts relevant to
+conformity; and the three named frameworks with their official companions. We exclude pure
+legal or policy commentary lacking a technical method, consumer/low-risk systems, and
+sector regulation outside the three frameworks (cited only for context).
+
+\subsection{Information Sources and Search}
+We searched IEEE~Xplore, the ACM Digital Library, Scopus, Web~of~Science, and arXiv
+(cs.LG, cs.AI, cs.CY, cs.CR, stat.ML), with forward/backward snowballing via
+Google~Scholar. Regulatory requirements were taken from the official corpus: the
+NIST~AI~RMF~1.0 (NIST~AI~100-1)~\cite{nist2023airmf} and its Generative~AI
+Profile~\cite{nist2024genai}; Regulation~(EU)~2024/1689~\cite{euaiact2024}; and
+ISO/IEC~42001:2023~\cite{iso42001} with companion standards. The Boolean search template
+combined system terms (AI, machine learning, LLM, foundation model, AI agent) with
+evaluation terms (evaluation, assessment, audit, benchmark, testing, assurance, conformity
+assessment) and method terms (fairness, robustness, safety, red-teaming, interpretability,
+calibration, data governance, model card, human oversight, monitoring), plus a dedicated
+governance string. The search window was 2015--2026 with an LLM/agentic emphasis on
+2022--2026; the language was English; the last search was conducted in June~2026.
+Table~\ref{tab:search} lists the concept groups, and the per-database Boolean query
+strings---with the term groups defined and substituted for each database---and the search
+dates are released for reproducibility in the companion artifact.
+
+\subsection{The Review Corpus and Its Reconciliation}
+To keep the corpus auditable we distinguish four record pools. (i)~A \emph{structured
+search} across the twelve families returned candidate technical-method records; after
+title/abstract and full-text screening and an identifier/citation-verification step
+(below), this yielded \textbf{141} verified technical-method references across families
+M1, M3--M11, and governance/positioning; privacy-evaluation methods (M12) were verified
+separately as a set of \textbf{6} references, so the released method index contains
+\textbf{147} records in total. (ii)~For the
+fairness family (M2) we \emph{reuse} a previously published, independently verified
+\textbf{202}-entry agent-fairness corpus released separately by the authors; because this
+is larger than the bespoke per-family searches, we treat it as a reused supplement and
+report a sensitivity analysis with and without it. (iii)~\textbf{Six} official
+regulatory/standards texts (the NIST, EU, and ISO anchors and companions) were
+hand-collected. (iv)~Two unpublished author manuscripts are mentioned in-text only as
+non-independent context and are not listed in the reference list. The complete verified corpus ($\approx$355 records: 147 method $+$ 202 reused $+$ 6
+official) is released as Supplementary
+Information and in the companion repository, each record carrying metadata, source status,
+and family assignment, so that every included record is inspectable. The article's
+\emph{reference list} cites approximately \textbf{180} records discussed in the narrative; the
+remaining reused-corpus entries are released in full rather than enumerated inline.
+Figure~\ref{fig:prisma} shows the record flow, every transition of which is reconciled in
+the released ledger.
+
+\emph{Family-level source counts} (newly verified method references) are M1~16, M3~14,
+M4~10, M5~13, M6~11, M7~15, M8~12, M9~14, M10~14, M11~12, governance/positioning~10, and
+privacy (M12)~6; the fairness family (M2) draws on the reused 202-entry corpus. \emph{Sensitivity:} because the matrix codes
+\emph{relevance type} rather than counts, removing the reused fairness corpus changes no
+matrix cell and no coverage-breadth rating; its only effect is the relative prominence of
+action-level fairness in the research agenda (Section~\ref{sec:gaps}), which we flag.
+
+\subsection{Selection Criteria}
+A record was \emph{included} if it (i)~proposed, surveyed, or empirically evaluated a
+technical AI evaluation method, or was an official regulatory/standards text;
+(ii)~addressed at least one of the twelve method families or framework requirements;
+(iii)~had retrievable full text; and (iv)~was in English. A record was \emph{excluded} if
+it was opinion/marketing without a method, purely legal analysis without technical
+evaluation content, a duplicate, not retrievable, or off-scope (Table~\ref{tab:incl}).
+
+\subsection{Data Extraction}
+For each included item we extracted a structured record: bibliographic metadata (authors,
+year, venue, DOI/arXiv identifier), a one-line statement of the method contributed, the
+assigned method family ($M1$--$M12$), the candidate mapped requirement(s) per framework,
+and a technical-relevance code.
+
+\subsection{Coding Protocol and Reliability}
+Mapping proceeded in three passes. (1)~\emph{Family assignment}: each method is assigned a
+primary family and optional secondary families. (2)~\emph{Requirement mapping}: for every
+(method, requirement) pair we assign a technical-relevance level grounded in the official
+clause text. \emph{Primary} (\direct): the method produces an artifact that the requirement
+chiefly asks for---e.g., an adversarial-robustness report for the EU AI Act Article~15
+robustness facet. \emph{Supporting} (\partialev): the artifact feeds a required outcome or
+document but is insufficient alone---e.g., a benchmark result is an input to the Article~9
+risk-management system but does not constitute it. \emph{Contextual} (\indirect): the
+artifact informs the requirement without serving as its evidence---e.g., interpretability
+analysis informs governance documentation. A blank denotes non-applicability. The
+supporting-versus-blank boundary for process obligations is decided by whether the method's
+output is a named input to the obligation's process (supporting) or not (blank).
+(3)~\emph{Structured re-examination}: a second pass challenged every non-blank cell against
+the clause text and downgraded over-claims (e.g., performance$\rightarrow$Article~11,
+safety$\rightarrow$Article~9, the technical$\rightarrow$GOVERN cells, and the privacy
+recoding); the full cell-level change log is released.
+
+\emph{Reliability.} A second author independently coded a stratified sample of 40 of the
+199 non-blank cells ($\approx$20\%), blind to the first-pass codes. Raw exact agreement was
+52.5\% (Cohen's $\kappa=0.18$). We report the unweighted $\kappa$ transparently but note it
+is deflated here by two well-understood effects: the marginal distribution is heavily skewed
+toward \emph{supporting} (the ``$\kappa$ paradox'', under which high agreement on an
+unbalanced category still yields a low $\kappa$), and the scale is a fine three-level ordinal
+one on which exact-match $\kappa$ penalizes adjacent codes as harshly as opposite ones. Because
+the codes are ordinal, the chance-corrected quadratically-weighted $\kappa$ is the appropriate
+measure: all 19 disagreements were a single adjacency level apart, with \emph{no}
+primary$\leftrightarrow$contextual conflicts, yielding a quadratically-weighted
+$\kappa=0.44$ (moderate). The scheme therefore separates strong from
+weak relevance reliably, while the supporting-versus-adjacent boundary is interpretive.
+Disagreements were adjudicated to a consensus code; the second
+coder's systematically more conservative treatment of governance cells was adopted across
+the GOVERN column.
+
+\emph{External validation.} To obtain a check independent of the author team, an external
+reviewer (not an author of this study; acknowledged below), blind to the first-pass codes,
+recoded the same 40-cell sample. Agreement with the first-pass codes was 57.5\% exact, with
+Cohen's $\kappa=0.23$ and a quadratically-weighted $\kappa=0.49$ (computed on the same
+relevance scale, here including a single not-applicable code); as in the in-team check, all
+17 disagreements were a single adjacency level apart, with \emph{no}
+primary$\leftrightarrow$contextual conflicts. The independent recoding
+reproduces the same pattern---modest exact agreement on the fine ordinal scale, reliable
+separation of strong from weak relevance---which supports presenting the crosswalk as a
+\emph{proposed}, externally-checked artifact; broader multi-expert validation would
+strengthen it further (Section~\ref{sec:limits}). Both the second-coder and external-validator
+cell-level ledgers (\texttt{coding\_audit.csv}, \texttt{external\_validation.csv}) are
+released as Supplementary Information.
+
+\subsection{Coverage Breadth}
+Per requirement we derive a \emph{coverage-breadth} indicator strictly from the number of
+method families with \emph{primary} relevance: \emph{broad} ($\geq$3 families),
+\emph{moderate} (1--2), and \emph{narrow} (0). We emphasize that this measures breadth of
+mapped families, \emph{not} the methodological maturity, validation quality, or deployment
+evidence of the underlying methods; it feeds the gap analysis (Section~\ref{sec:gaps}).
+
+\subsection{Standards Access and Citation Integrity}
+Every regulatory obligation is cited to its official source with the specific article,
+subcategory, or control identifier. For ISO/IEC~42001:2023 we mapped to the published
+Annex~A control structure (numbers and titles) and corroborating secondary analyses of the
+standard; protected text is not reproduced beyond permissible quotation. No reference
+entered the bibliography without a verified DOI, arXiv identifier, or official document URL
+confirmed to resolve; reused entries inherited prior verification and were spot-checked.
+
+\subsection{Threats to Validity}
+The crosswalk is interpretive: the frameworks are outcome- and process-oriented and do not
+prescribe specific methods, so our cells are reasoned engineering interpretations of
+technical relevance, not legal compliance determinations, and a different coder could
+assign some adjacent codes differently (the reliability analysis quantifies this). The
+frameworks also evolve: EU AI Act application dates were revised by a May~2026 political
+agreement, delegated acts and harmonised standards remain in progress, and ISO/IEC
+companion standards are emerging (Section~\ref{sec:background}); this review therefore
+reflects the state of affairs as of June~2026. Database coverage, English-only inclusion,
+preprint inclusion, and the reused fairness corpus introduce selection effects, partly
+addressed by the sensitivity analysis above. This article is a technical review and does
+\emph{not} constitute legal advice.

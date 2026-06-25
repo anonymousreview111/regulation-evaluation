@@ -1,0 +1,12 @@
+import re
+t = open('paper/main_ieeeaccess.tex', encoding='utf-8').read()
+m = re.search(r'\\begin\{abstract\}(.*?)\\end\{abstract\}', t, re.S)
+ab = re.sub(r'\\[a-zA-Z]+\*?', ' ', m.group(1))
+ab = re.sub(r'[{}~\\]', ' ', ab)
+words = len(ab.split())
+print('abstract word count:', words, '(IEEE Access wants 150-250)')
+has_cite = '\\cite' in m.group(1)
+print('abstract has citations:', has_cite)
+print('abstract paragraphs:', m.group(1).count('\n\n') + 1)
+k = re.search(r'\\begin\{keywords\}(.*?)\\end\{keywords\}', t, re.S).group(1)
+print('keywords:', len([x for x in k.split(',') if x.strip()]))

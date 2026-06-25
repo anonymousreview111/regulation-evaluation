@@ -1,0 +1,123 @@
+This section presents the central contribution: a mapping from the twelve technical
+evaluation method families of Section~\ref{sec:taxonomy} to the requirements of the three
+frameworks. We first state the coding scheme, then walk each framework, and close with a
+cross-framework crosswalk. The full mapping is given in Table~\ref{tab:matrix} and
+visualized in Fig.~\ref{fig:heatmap}.
+
+\subsection{Technical-relevance coding}
+For each (method family, requirement) pair we assign one of three levels of \emph{technical
+relevance}---how far the method's output could contribute to an evidentiary case for the
+requirement, grounded in the official clause text. We code \emph{relevance}, not legal
+sufficiency: a technical artifact rarely demonstrates conformity by itself, its adequacy
+depending on intended purpose, applicable harmonised standards, acceptance criteria, and the
+conformity-assessment route. \emph{Primary} (\direct): the output is itself the kind of
+technical evidence the requirement chiefly asks for. \emph{Supporting} (\partialev): the
+method contributes but is insufficient alone. \emph{Contextual} (\indirect): it informs the
+requirement without serving as its evidence. A blank denotes non-applicability. Codes were
+assigned in a first pass grounded in clause text, then challenged in a structured second
+pass, with a second author independently coding a stratified sample (Section~\ref{sec:method}).
+The coding is an interpretive engineering judgment (Section~\ref{sec:limits}); we present the
+matrix as a \emph{proposed} crosswalk inviting external validation, not an established map of
+what demonstrates conformity.
+
+\paragraph{Worked example} To make the coding transparent, consider EU AI Act Article~15,
+which requires high-risk systems to achieve ``appropriate levels of accuracy, robustness
+and cybersecurity''~\cite{euaiact2024}. Performance and benchmarking (M1) has
+\emph{primary} relevance to the accuracy dimension through held-out and out-of-distribution
+test results; robustness and distribution-shift evaluation (M3) has \emph{primary} relevance
+to robustness through adversarial and corruption tests; red-teaming (M5) has \emph{primary}
+relevance to resilience to manipulation; uncertainty and calibration (M7) has only
+\emph{supporting} relevance, since it characterizes the reliability of accuracy claims but
+not adversarial security; and interpretability (M6) is not applicable to this
+clause. Applying this logic clause by clause against the official text produces every cell
+of Table~\ref{tab:matrix}.
+
+\input{tab_matrix.tex}
+
+\subsection{Mapping to the NIST AI RMF}\label{sec:map-nist}
+The NIST AI RMF concentrates technical measurement in the \textsc{Measure} function,
+whose subcategories enumerate the trustworthiness characteristics to be
+evaluated~\cite{nist2023airmf}. Throughout, we use NIST's official \textsc{Measure}~2.x
+subcategory numbering (notably 2.3 performance, 2.5 validity and reliability, 2.6 safety,
+2.7 security and resilience, 2.8 transparency and accountability, 2.9 explainability and
+interpretability, 2.10 privacy, and 2.11 fairness and harmful bias managed). The matrix columns cover the
+trustworthiness-characteristic subcategories most directly tied to technical evaluation;
+the remaining subcategories---\textsc{Measure}~2.1 (test
+documentation), 2.2 (human-subject evaluations), 2.4 (in-production monitoring), 2.5
+(validity and reliability), 2.8 (transparency and accountability), 2.12 (environmental
+impact), and 2.13 (measurement effectiveness)---are addressed through the accuracy (2.3),
+documentation (M8, M9), monitoring (M11), and governance rows rather than as separate
+columns. The mapping is correspondingly densest in the \textsc{Measure} function.
+Performance and benchmarking (M1) is primarily relevant to \textsc{Measure}~2.3
+(accuracy/performance)~\cite{hendrycks2020mmlu,liang2023holistic}; robustness and
+distribution-shift evaluation (M3) and red-teaming (M5) are primarily relevant to
+\textsc{Measure}~2.7 (security and resilience) and supporting for \textsc{Measure}~2.6
+(safety), for which dedicated safety evaluation (M4) is the primary
+source~\cite{madry2018pgd,cohen2019certified,zou2023universal,mazeika2024harmbench};
+interpretability (M6) is primarily relevant to \textsc{Measure}~2.9 (explainability and
+interpretability)~\cite{lundberg2017shap,ribeiro2016lime}; and fairness evaluation (M2)
+is primarily relevant to \textsc{Measure}~2.11 (fairness and harmful bias
+managed)~\cite{parrish2022bbq,gallegos2024bias}; and privacy evaluation (M12)
+has \emph{supporting} relevance to \textsc{Measure}~2.10 (privacy)---its membership-inference,
+extraction, and differential-privacy methods detect leakage and bound risk but do not by
+themselves assure privacy adequacy~\cite{shokri2017membership,carlini2021extracting,abadi2016dp}.
+Uncertainty and calibration (M7) has \emph{supporting} relevance to the accuracy and reliability
+subcategories (\textsc{Measure}~2.3/2.5): it characterizes the reliability of performance
+claims rather than producing the performance metric itself~\cite{guo2017calibration}. The
+\textsc{Govern} and \textsc{Map} functions, being organizational and contextual, are served
+only with \emph{supporting} or \emph{contextual} relevance: documentation families (M8, M9)
+are the most relevant here~\cite{mitchell2019modelcards,gebru2018datasheets},
+while \textsc{Manage}---ongoing risk treatment and monitoring---is chiefly served by
+post-deployment monitoring and assurance (M11)~\cite{leest2025contextaware}. The pattern
+is clear: NIST's measurement-centric design aligns tightly with the technical literature,
+which is itself organized around measurable trustworthiness characteristics.
+
+\subsection{Mapping to the EU AI Act (Articles 9--15)}\label{sec:map-eu}
+The EU AI Act's high-risk obligations are more heterogeneous, mixing technical and
+process requirements~\cite{euaiact2024}. Article~15 (accuracy, robustness, cybersecurity)
+is the most technically saturated: M1 evidences accuracy, M3 robustness, and M5 the
+resilience-to-manipulation and model-extraction concerns through adversarial testing and
+prompt-injection
+evaluation~\cite{dong2023promptrobust,greshake2023notwhat,zhang2024agent}. Article~10
+(data and data governance) is primarily served by data-quality and documentation
+methods (M8)~\cite{gebru2018datasheets,luccioni2023dataprovenance} and partially by
+fairness evaluation of representativeness (M2), which evidences representativeness
+outcomes rather than the data-governance management practices Article~10 requires. Article~11 (technical documentation, Annex~IV) and
+Article~13 (transparency to deployers) are primarily served by the documentation and
+transparency families (M9)~\cite{mitchell2019modelcards,pan2024modelreporting}. Article~14
+(human oversight) is uniquely served by human-oversight evaluation
+(M10)~\cite{guo2024reliance,chen2024reliancedrills}. Two obligations stand out for their
+\emph{thin} technical coverage: Article~12 (record-keeping and logging) is an engineering
+capability that few evaluation \emph{methods} assess for adequacy, and Article~9 (the
+risk-management system) is a process that technical evaluations feed but do not
+constitute. These observations anticipate the gap analysis.
+
+\subsection{Mapping to ISO/IEC 42001}\label{sec:map-iso}
+ISO/IEC~42001 is a management-system standard; its Annex~A controls are framed around
+lifecycle processes rather than specific metrics~\cite{iso42001}. The technical
+literature maps most directly onto the verification-and-validation control (A.6.2.4),
+which nearly every method family can evidence, and onto the data controls (A.7), served
+by M8. The AI-system impact-assessment controls (A.5) are substantially supported by
+fairness and safety evaluation (M2, M4) but, as with EU Article~9, retain a process
+character that technical methods only partly satisfy---hence those cells are coded
+supporting rather than primary. The information-to-interested-parties control
+(A.8) is served by transparency documentation (M9), and operation-and-monitoring
+(A.6.2.6) by M11. Because ISO/IEC~42001 is explicitly designed to interoperate with risk
+frameworks~\cite{iso23894} and is referenced by the EU AI Act's quality-management
+obligation, evidence assembled for one framework substantially transfers to it.
+
+\subsection{Cross-framework crosswalk}\label{sec:crosswalk}
+A striking regularity emerges across the three mappings: the same technical evaluation
+artifact frequently evidences obligations in all three frameworks simultaneously
+(Fig.~\ref{fig:crosswalk}). An adversarial-robustness report evidences NIST
+\textsc{Measure}~2.7, EU Article~15, and ISO/IEC~42001 A.6.2.4 at once; a model card
+evidences NIST documentation expectations, EU Articles~11 and~13, and ISO/IEC~42001 A.8.
+This convergence is the practical engine behind the practitioner playbook of
+Section~\ref{sec:discussion}: a single, well-designed evaluation dossier can serve
+multiple jurisdictions, provided it is explicitly cross-referenced to each framework's
+clauses. We stress that this convergence is an \emph{interpretive} claim of evidentiary
+compatibility---that the same artifact can satisfy the evidentiary need of each clause---and
+not an assertion that the obligations are legally identical; their scope, thresholds, and
+legal force differ, and the alignments in Fig.~\ref{fig:crosswalk} should be read as
+reasoned correspondences rather than equivalences. The mapping matrix is, in effect, the
+index that makes such reuse auditable.

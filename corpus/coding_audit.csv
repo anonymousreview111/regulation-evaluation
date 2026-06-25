@@ -1,0 +1,43 @@
+cell_id,method_family,framework,requirement,first_pass_code,second_coder_code,agreed,final_adjudicated_code,adjudication_basis,second_coder_note
+C001,M1 Performance & benchmarking,EU AI Act,Article 15 accuracy/robustness/cybersecurity,primary,primary,Y,primary,both coders agreed,Benchmark results directly evidence the named accuracy component.
+C002,M1 Performance & benchmarking,ISO/IEC 42001,A.6.2.6 operation & monitoring,supporting,contextual,N,contextual,adopted second-coder (downgrade; less over-claiming),Benchmark results are not production monitoring evidence.
+C003,M1 Performance & benchmarking,ISO/IEC 42001,A.7 data for AI systems,contextual,contextual,Y,contextual,both coders agreed,"Does not evidence data provenance, quality, or governance."
+C004,M1 Performance & benchmarking,NIST AI RMF,MEASURE 2.3 performance/accuracy,primary,supporting,N,primary,"retained first-coder (rubric: relevance-type, not sufficiency)","Direct performance evidence, but deployment-like conditions are unstated."
+C005,M1 Performance & benchmarking,NIST AI RMF,MEASURE 2.6 safety,contextual,contextual,Y,contextual,both coders agreed,Performance scores do not evaluate harmful behavior.
+C006,M1 Performance & benchmarking,NIST AI RMF,MANAGE function,supporting,supporting,Y,supporting,both coders agreed,"Feeds risk prioritization, but is not the MANAGE process itself."
+C007,M10 Human oversight,NIST AI RMF,GOVERN function,supporting,contextual,N,contextual,adopted second-coder (downgrade; less over-claiming),Oversight studies do not establish organizational governance.
+C008,M10 Human oversight,ISO/IEC 42001,A.5 assessing impacts,supporting,supporting,Y,supporting,both coders agreed,"Helps assess human impacts, but is not a full impact assessment."
+C009,M10 Human oversight,ISO/IEC 42001,A.6.2.4 verification & validation,supporting,supporting,Y,supporting,both coders agreed,One important form of validation evidence.
+C010,M10 Human oversight,NIST AI RMF,MANAGE function,supporting,supporting,Y,supporting,both coders agreed,"Helps evaluate a risk response, but not the full MANAGE process."
+C011,M11 Post-deployment monitoring,EU AI Act,Article 11 technical documentation,contextual,supporting,N,contextual,"retained first-coder (rubric: relevance-type, not sufficiency)",Monitoring evidence can support broader technical documentation.
+C012,M11 Post-deployment monitoring,NIST AI RMF,GOVERN function,supporting,contextual,N,contextual,adopted second-coder (downgrade; less over-claiming),"Operational evidence does not establish policies, roles, or culture."
+C013,M11 Post-deployment monitoring,ISO/IEC 42001,A.5 assessing impacts,supporting,supporting,Y,supporting,both coders agreed,Incidents and runtime evidence contribute to impact assessment.
+C014,M11 Post-deployment monitoring,NIST AI RMF,MANAGE function,primary,supporting,N,supporting,adopted second-coder (downgrade; less over-claiming),"Strong monitoring evidence, but not the full MANAGE process."
+C015,M12 Privacy evaluation,EU AI Act,Article 11 technical documentation,supporting,supporting,Y,supporting,both coders agreed,Privacy results can support broader technical documentation.
+C016,M12 Privacy evaluation,EU AI Act,Article 15 accuracy/robustness/cybersecurity,supporting,primary,N,supporting,"retained first-coder (rubric: relevance-type, not sufficiency)",Inference and extraction attacks directly evidence cybersecurity resistance.
+C017,M12 Privacy evaluation,NIST AI RMF,MEASURE 2.11 fairness & bias,contextual,contextual,Y,contextual,both coders agreed,Privacy risk evidence is not fairness or bias evidence.
+C018,M2 Fairness & bias,ISO/IEC 42001,A.6.2.4 verification & validation,supporting,supporting,Y,supporting,both coders agreed,Fairness testing is one part of broader validation.
+C019,M3 Robustness & distribution shift,EU AI Act,Article 10 data governance,contextual,contextual,Y,contextual,both coders agreed,Robustness testing does not evidence dataset governance itself.
+C020,M3 Robustness & distribution shift,EU AI Act,Article 13 transparency,contextual,supporting,N,contextual,"retained first-coder (rubric: relevance-type, not sufficiency)","Results help describe capabilities, limits, and proper use."
+C021,M3 Robustness & distribution shift,EU AI Act,Article 15 accuracy/robustness/cybersecurity,primary,primary,Y,primary,both coders agreed,Direct robustness evidence for the requirement.
+C022,M3 Robustness & distribution shift,NIST AI RMF,MEASURE 2.3 performance/accuracy,supporting,primary,N,supporting,"retained first-coder (rubric: relevance-type, not sufficiency)",Direct performance evidence under distribution-shift conditions.
+C023,M3 Robustness & distribution shift,NIST AI RMF,MAP function,supporting,supporting,Y,supporting,both coders agreed,"Helps identify capabilities and risks, but not full system context."
+C024,M4 Safety,EU AI Act,Article 13 transparency,contextual,supporting,N,contextual,"retained first-coder (rubric: relevance-type, not sufficiency)",Safety results help communicate capabilities and limits.
+C025,M4 Safety,ISO/IEC 42001,A.5 assessing impacts,supporting,primary,N,supporting,"retained first-coder (rubric: relevance-type, not sufficiency)",Hazard and harm evaluations directly assess impacts.
+C026,M4 Safety,ISO/IEC 42001,A.8 information for interested parties,supporting,supporting,Y,supporting,both coders agreed,"Provides content for disclosures, but not the provision process."
+C027,M4 Safety,NIST AI RMF,MAP function,supporting,supporting,Y,supporting,both coders agreed,"Direct risk evidence, but not the full context-and-capabilities mapping."
+C028,M5 Red-teaming & adversarial,EU AI Act,Article 15 accuracy/robustness/cybersecurity,primary,primary,Y,primary,both coders agreed,Direct adversarial robustness and cybersecurity evidence.
+C029,M5 Red-teaming & adversarial,NIST AI RMF,GOVERN function,supporting,contextual,N,contextual,adopted second-coder (downgrade; less over-claiming),Technical attack results do not establish governance structures.
+C030,M6 Interpretability & explainability,ISO/IEC 42001,A.5 assessing impacts,contextual,contextual,Y,contextual,both coders agreed,Interpretability informs analysis but does not directly assess impacts.
+C031,M7 Uncertainty & calibration,EU AI Act,Article 13 transparency,supporting,supporting,Y,supporting,both coders agreed,Helps communicate confidence and system limitations.
+C032,M7 Uncertainty & calibration,ISO/IEC 42001,A.6.2.4 verification & validation,primary,supporting,N,supporting,adopted second-coder (downgrade; less over-claiming),"Validates one technical criterion, not the full V&V process."
+C033,M7 Uncertainty & calibration,ISO/IEC 42001,A.6.2.6 operation & monitoring,supporting,supporting,Y,supporting,both coders agreed,"Useful monitoring metric, but not production monitoring by itself."
+C034,M7 Uncertainty & calibration,NIST AI RMF,MEASURE 2.9 explainability,supporting,contextual,N,contextual,adopted second-coder (downgrade; less over-claiming),Calibration and uncertainty are not explainability evidence.
+C035,M8 Data quality/governance/docs,EU AI Act,Article 11 technical documentation,supporting,supporting,Y,supporting,both coders agreed,Data documentation is one component of the broader Annex IV package.
+C036,M8 Data quality/governance/docs,NIST AI RMF,GOVERN function,supporting,contextual,N,contextual,adopted second-coder (downgrade; less over-claiming),"Data audits do not evidence organizational policies, roles, or culture."
+C037,M8 Data quality/governance/docs,NIST AI RMF,MEASURE 2.10 privacy,supporting,contextual,N,contextual,adopted second-coder (downgrade; less over-claiming),These data checks do not directly test leakage or inference risk.
+C038,M9 Transparency & model docs,EU AI Act,Article 9 risk management,contextual,supporting,N,contextual,"retained first-coder (rubric: relevance-type, not sufficiency)",Documentation supports risk management but is not the system itself.
+C039,M9 Transparency & model docs,NIST AI RMF,GOVERN function,supporting,contextual,N,contextual,adopted second-coder (downgrade; less over-claiming),"System cards do not establish policies, roles, or accountability."
+C040,M9 Transparency & model docs,ISO/IEC 42001,A.6.2.4 verification & validation,contextual,supporting,N,contextual,"retained first-coder (rubric: relevance-type, not sufficiency)",Documents validation evidence but is not validation by itself.
+
+SUMMARY,raw agreement 21/40 = 52.5% (Cohen's kappa 0.18),all 19 disagreements one level apart (0 primary<->contextual),quadratically-weighted kappa 0.44 (moderate; chance-corrected ordinal measure),10 second-coder downgrades adopted,,,,,

@@ -1,0 +1,29 @@
+% T3 — taxonomy summary
+\begin{table*}[!tp]
+\centering
+\caption{Taxonomy of technical AI evaluation method families. Maturity is assessed for the
+LLM/agentic setting; classical-ML maturity is higher in several families. \textbf{Takeaway:}
+most families are mature for classical/static models but only \emph{emerging} for LLM and
+agentic systems---the maturity frontier, not the method inventory, is where conformity evidence
+is currently thin.}
+\label{tab:taxonomy}
+\footnotesize
+\begin{tabular}{p{0.04\textwidth}p{0.17\textwidth}p{0.40\textwidth}p{0.20\textwidth}}
+\toprule
+ID & Family & Representative methods / metrics & Maturity (LLM/agentic)\\
+\midrule
+M1 & Performance \& benchmarking & Held-out/OOD test sets, AUROC/F1, significance testing; MMLU, SuperGLUE, BIG-bench, agentic task suites & Mature (classical); evolving (agentic)\\
+M2 & Fairness \& bias & Group/individual/counterfactual fairness, disparate impact; BBQ, StereoSet; action-level disparity & Mature (model); emerging (agentic)\\
+M3 & Robustness \& distribution shift & PGD/C\&W attacks, randomized smoothing, ImageNet-C, WILDS, prompt-robustness & Mature (vision); emerging (LLM)\\
+M4 & Safety evaluation & Hazard analysis, dangerous-capability evals, content-harm benchmarks, safety cases & Emerging\\
+M5 & Red-teaming \& adversarial & Structured/automated red-teaming, jailbreaks, (indirect) prompt injection, agent tool-misuse & Emerging, fast-moving\\
+M6 & Interpretability \& explainability & Feature attribution (SHAP, LIME, integrated gradients), concept testing (TCAV), probing, mechanistic interp., explanation-faithfulness, CoT faithfulness & Maturing; faithfulness contested\\
+M7 & Uncertainty \& calibration & ECE/Brier, conformal prediction, selective prediction, semantic entropy, hallucination detection & Mature (calibration); emerging (LLM)\\
+M8 & Data quality, governance \& docs & Datasheets, data cards, provenance audits, contamination/leakage detection, representativeness & Maturing\\
+M9 & Transparency \& model documentation & Model/system cards, FactSheets, transparency indices, reproducibility checklists & Maturing\\
+M10 & Human oversight \& interaction & Oversight-effectiveness, automation-bias and appropriate-reliance studies, escalation/deferral & Emerging\\
+M11 & Post-deployment monitoring \& assurance & Drift detection, runtime monitoring, logging, incident reporting, third-party audit & Emerging\\
+M12 & Privacy evaluation & Membership-inference and extraction attacks, differential-privacy verification, model-inversion resistance, privacy-risk assessment & Mature (attacks); emerging (LLM/agentic)\\
+\bottomrule
+\end{tabular}
+\end{table*}

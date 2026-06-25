@@ -1,0 +1,481 @@
+[
+  {
+    "framework": "NIST AI Risk Management Framework 1.0 (NIST.AI.100-1) and Generative AI Profile (NIST.AI.600-1)",
+    "official_citation": "NIST AI 100-1: Artificial Intelligence Risk Management Framework (AI RMF 1.0). U.S. Department of Commerce, National Institute of Standards and Technology. January 26, 2023. https://nvlpubs.nist.gov/nistpubs/ai/nist.ai.100-1.pdf. DOI: 10.6028/NIST.AI.100-1",
+    "requirements": [
+      {
+        "id": "MEASURE 1.1",
+        "title": "Selecting Appropriate Metrics and Approaches - Documentation of Unmeasurable Risks",
+        "obligation": "Approaches and metrics for measurement of AI risks enumerated during the Map function are selected for implementation starting with the most significant AI risks, with risks or trustworthiness characteristics that will not or cannot be measured properly documented.",
+        "needs_technical_evidence": true
+      },
+      {
+        "id": "MEASURE 1.2",
+        "title": "Regular Assessment and Updates of Metrics and Controls",
+        "obligation": "Appropriateness of AI metrics and effectiveness of existing controls is regularly assessed and updated including reports of errors and impacts on affected communities.",
+        "needs_technical_evidence": true
+      },
+      {
+        "id": "MEASURE 1.3",
+        "title": "Independent and External Expert Involvement in Assessments",
+        "obligation": "Internal experts who did not serve as front-line developers for the system and/or independent assessors are involved in regular assessments and updates, with domain experts, users, AI actors external to the team, and affected communities consulted as necessary per organizational risk tolerance.",
+        "needs_technical_evidence": true
+      },
+      {
+        "id": "MEASURE 2.1",
+        "title": "[Trustworthiness Evaluation - Test Documentation and Methodology]",
+        "obligation": "Test sets, metrics, and details about the tools used during Assessment, Audit, Verification and Validation (AAVV) are documented to enable evaluation of AI system trustworthiness characteristics.",
+        "needs_technical_evidence": true
+      },
+      {
+        "id": "MEASURE 2.2",
+        "title": "[Trustworthiness Evaluation - Data Representativeness]",
+        "obligation": "Data representativeness is evaluated through investigating known failure modes, assessing data quality and diverse sourcing, applying public benchmarks, traditional bias testing, and chaos engineering.",
+        "needs_technical_evidence": true
+      },
+      {
+        "id": "MEASURE 2.3",
+        "title": "[Trustworthiness Evaluation - Performance and Assurance Criteria]",
+        "obligation": "AI system performance criteria such as accuracy (including false positive/negative rates) and efficiency (training times, prediction latency), as well as assurance criteria such as AI actor competency, are measured and documented for conditions similar to deployment.",
+        "needs_technical_evidence": true
+      },
+      {
+        "id": "MEASURE 3.1",
+        "title": "[Continuous Monitoring - Drift Detection and Performance Tracking]",
+        "obligation": "Continuous monitoring is implemented to detect performance deviations and emerging risks during deployment, with metrics and performance indicators observed in production compared to pre-deployment testing results.",
+        "needs_technical_evidence": true
+      },
+      {
+        "id": "MEASURE 4.1",
+        "title": "[Validation in Deployment - Measurement Approach Assessment]",
+        "obligation": "Measurement approaches selected during development are validated to ensure they remain effective and appropriate when AI systems are deployed in actual operational contexts.",
+        "needs_technical_evidence": true
+      },
+      {
+        "id": "MAP 2.1",
+        "title": "[System Task Characterization - Technical Methods]",
+        "obligation": "Technical methods, data inputs, outputs, and decision procedures for the AI system are documented to enable identification of risks and required measurements.",
+        "needs_technical_evidence": true
+      },
+      {
+        "id": "MAP 5.1",
+        "title": "[Impact Characterization - Risk Impact Scope]",
+        "obligation": "Potential impacts of the AI system are characterized including direct and indirect harms, benefits, and feedback mechanisms for identified risks.",
+        "needs_technical_evidence": true
+      },
+      {
+        "id": "MANAGE 1.1",
+        "title": "[Resource Allocation to Prioritized Risks]",
+        "obligation": "Resources are allocated to address prioritized AI risks on a regular basis according to organizational risk tolerance and governance decisions.",
+        "needs_technical_evidence": true
+      },
+      {
+        "id": "MANAGE 2.1",
+        "title": "[Risk Response Strategies - Selection and Implementation]",
+        "obligation": "Appropriate risk response strategies (mitigate, transfer, avoid, or accept) are selected and implemented for each identified and prioritized AI risk.",
+        "needs_technical_evidence": true
+      },
+      {
+        "id": "MEASURE 2.4",
+        "title": "Functionality and behavior monitored in production",
+        "obligation": "The AI system is monitored in deployment for functionality and behavior, including performance against deployment-context expectations.",
+        "needs_technical_evidence": true
+      },
+      {
+        "id": "MEASURE 2.5",
+        "title": "Validity and reliability demonstrated",
+        "obligation": "The AI system to be deployed is demonstrated to be valid and reliable; limitations of generalizability beyond development conditions are documented.",
+        "needs_technical_evidence": true
+      },
+      {
+        "id": "MEASURE 2.6",
+        "title": "Safety risks evaluated",
+        "obligation": "The AI system is evaluated for safety risks, with residual negative risk within tolerance and real-time monitoring and response for failures.",
+        "needs_technical_evidence": true
+      },
+      {
+        "id": "MEASURE 2.7",
+        "title": "Security and resilience evaluated",
+        "obligation": "The AI system\u2019s security and resilience to adversarial events (e.g., evasion, poisoning, model inversion/extraction, unauthorized access) are evaluated.",
+        "needs_technical_evidence": true
+      },
+      {
+        "id": "MEASURE 2.8",
+        "title": "Transparency and accountability examined",
+        "obligation": "Risks associated with transparency and accountability are examined and documented, including instrumentation, audit logs, and roles/responsibilities.",
+        "needs_technical_evidence": true
+      },
+      {
+        "id": "MEASURE 2.9",
+        "title": "Explainability and interpretability evaluated",
+        "obligation": "The AI model is explained, validated, and interpreted within its context to support responsible use and oversight.",
+        "needs_technical_evidence": true
+      },
+      {
+        "id": "MEASURE 2.10",
+        "title": "Privacy risk evaluated",
+        "obligation": "Privacy risk of the AI system is examined and documented, including use of privacy-enhancing techniques such as differential privacy.",
+        "needs_technical_evidence": true
+      },
+      {
+        "id": "MEASURE 2.11",
+        "title": "Fairness and bias evaluated and managed",
+        "obligation": "Fairness and bias\u2014systemic, computational/statistical, and human-cognitive\u2014are evaluated and results documented using context-appropriate metrics.",
+        "needs_technical_evidence": true
+      },
+      {
+        "id": "MEASURE 2.12",
+        "title": "Environmental impact evaluated",
+        "obligation": "Environmental impact and sustainability of AI model training and management activities are assessed and documented.",
+        "needs_technical_evidence": true
+      },
+      {
+        "id": "MEASURE 2.13",
+        "title": "Effectiveness of measurement tracked",
+        "obligation": "The effectiveness of the employed measurement approaches is evaluated and monitored over time.",
+        "needs_technical_evidence": true
+      }
+    ],
+    "_note": "Completed June 2026 with the full official MEASURE 2.4-2.13 trustworthiness subcategories (NIST AI 100-1); the initial extraction captured only 2.1-2.3."
+  },
+  {
+    "framework": "EU AI Act Regulation (EU) 2024/1689 - High-Risk AI System Obligations",
+    "official_citation": "Regulation (EU) 2024/1689 of the European Parliament and of the Council of 13 June 2024 laying down harmonised rules on artificial intelligence. EUR-Lex. https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng",
+    "requirements": [
+      {
+        "id": "Art. 9",
+        "title": "Risk Management System",
+        "obligation": "Providers of high-risk AI systems shall establish and maintain a risk management system that encompasses identification and analysis of potential hazards and risks associated with the AI system throughout its lifecycle, estimation and evaluation of risks, mitigation measures, and decisions of the risk level. The risk management system shall be updated on an ongoing basis, addressing risks identified through post-market monitoring."
+      },
+      {
+        "id": "Art. 10",
+        "title": "Data and Data Governance",
+        "obligation": "High-risk AI systems using techniques involving training of models shall be developed on the basis of training, validation and testing data sets meeting quality criteria. All data sets used must be subject to appropriate data governance and management practices proportionate to the intended purpose. Data shall be representative, relevant, free from errors and bias, and documented accordingly."
+      },
+      {
+        "id": "Art. 11",
+        "title": "Technical Documentation including Annex IV",
+        "obligation": "Providers shall prepare and maintain technical documentation containing all elements specified in Annex IV, demonstrating that the high-risk AI system complies with the requirements in Chapter 3, Section 2 of this Regulation. Where a system relates to a product covered by Union harmonisation legislation, a single technical documentation set shall be drawn up containing all information required under both the AI Act and applicable sectoral legislation.",
+        "needs_technical_evidence": true
+      },
+      {
+        "id": "Art. 12",
+        "title": "Record-Keeping and Logging",
+        "obligation": "High-risk AI systems shall be designed to technically enable the automatic recording and logging of events over the lifetime of the system. Providers shall maintain automatically generated logs for a period of at least six months (unless otherwise required by applicable Union or national law), provided such logs are under their control. Logs must enable verification of compliance and permit reconstructing the AI system's operations."
+      },
+      {
+        "id": "Art. 13",
+        "title": "Transparency and Information to Deployers",
+        "obligation": "Providers shall ensure appropriate transparency with a view to achieving compliance with obligations of both providers and deployers. Providers shall furnish deployers with clear information about the intended purpose of the system, its characteristics, performance, limitations, requirements for use, appropriate human oversight, and information supporting deployers' data protection impact assessments under GDPR and Law Enforcement Directive."
+      },
+      {
+        "id": "Art. 14",
+        "title": "Human Oversight",
+        "obligation": "High-risk AI systems shall be designed and developed with appropriate human-machine interface tools enabling effective oversight by natural persons during use. Human oversight shall aim to prevent or minimise risks to health, safety or fundamental rights that may emerge when the system is used as intended or under reasonably foreseeable misuse. Deployers shall assign human oversight responsibilities to competent, trained natural persons with authority and necessary support to intervene."
+      },
+      {
+        "id": "Art. 15",
+        "title": "Accuracy, Robustness and Cybersecurity",
+        "obligation": "High-risk AI systems shall achieve appropriate levels of accuracy, robustness and cybersecurity. Providers shall design and develop systems to be resilient to reasonably foreseeable attempts of manipulation and to minimise the risk of model inversion and extraction. Systems shall be secure against adversarial inputs and attacks, and providers shall document measures ensuring the system maintains adequate performance under various operational conditions."
+      },
+      {
+        "id": "Art. 17",
+        "title": "Quality Management System (QMS)",
+        "obligation": "Providers of high-risk AI systems shall establish and maintain a documented quality management system ensuring compliance with the Regulation. The QMS shall address system design, development, testing, risk management, data handling, human oversight, performance monitoring, post-market monitoring, incident reporting, and communication with authorities. Implementation must be proportionate to provider size and may be integrated with existing sectoral QMS obligations. Financial institutions complying with Union financial services law may satisfy QMS obligations through compliance with their internal governance requirements."
+      },
+      {
+        "id": "Art. 43",
+        "title": "Conformity Assessment Procedures",
+        "obligation": "High-risk AI systems shall undergo conformity assessment as specified in this Article. Notified bodies shall verify conformity of high-risk AI systems in accordance with procedures outlined in Article 43, assessing technical documentation, quality management systems, risk management systems, and post-market monitoring arrangements. Providers shall follow assessment procedures proportionate to their size and sector complexity to minimise administrative burden, particularly for micro and small enterprises."
+      },
+      {
+        "id": "Art. 72",
+        "title": "Post-Market Monitoring by Providers",
+        "obligation": "Providers of high-risk AI systems shall establish and maintain a post-market monitoring plan ensuring ongoing monitoring of the system's operation throughout its lifecycle. Providers shall implement appropriate monitoring activities to detect and address risks, collect and analyse data on performance and incidents, and maintain records. Providers must inform deployers and market surveillance authorities without undue delay when they have knowledge of risks or incidents related to the system's operation."
+      }
+    ]
+  },
+  {
+    "framework": "ISO/IEC 42001:2023 - Artificial Intelligence Management System",
+    "official_citation": "ISO/IEC 42001:2023, Information technology \u2014 Artificial intelligence \u2014 Management system, 2023, https://www.iso.org/standard/42001",
+    "requirements": [
+      {
+        "id": "Clause 4",
+        "title": "Context of the Organization",
+        "obligation": "Organizations must understand their context, internal and external issues, interested parties, and scope of their AI management system.",
+        "needs_technical_evidence": false
+      },
+      {
+        "id": "Clause 5",
+        "title": "Leadership",
+        "obligation": "Top management must demonstrate commitment to the AI management system, define policies and objectives, assign responsibilities and authorities, and communicate the importance of AI governance.",
+        "needs_technical_evidence": false
+      },
+      {
+        "id": "Clause 6",
+        "title": "Planning",
+        "obligation": "Organizations must address risks and opportunities, establish AI objectives aligned with policies, plan actions to achieve objectives, and integrate planning into organizational processes.",
+        "needs_technical_evidence": false
+      },
+      {
+        "id": "Clause 7",
+        "title": "Support",
+        "obligation": "Organizations must ensure adequate resources (people, infrastructure, competence, awareness, communication) to establish, implement, and maintain the AI management system.",
+        "needs_technical_evidence": true
+      },
+      {
+        "id": "Clause 8",
+        "title": "Operation",
+        "obligation": "Organizations must plan, implement, and control processes to meet requirements for AI system planning, development, deployment, and operation, including responsible design, validation, and monitoring.",
+        "needs_technical_evidence": true
+      },
+      {
+        "id": "Clause 9",
+        "title": "Performance Evaluation",
+        "obligation": "Organizations must determine what to monitor and measure, analyze results, conduct internal audits, and conduct management reviews to assess AI management system effectiveness.",
+        "needs_technical_evidence": true
+      },
+      {
+        "id": "Clause 10",
+        "title": "Improvement",
+        "obligation": "Organizations must continually improve the AI management system through corrective actions, handling nonconformities, and implementing improvements based on audit findings and management reviews.",
+        "needs_technical_evidence": false
+      },
+      {
+        "id": "A.2.1",
+        "title": "AI Policies \u2014 Establishment",
+        "obligation": "Establish and document organizational policies that address AI-specific governance requirements and management direction for responsible AI.",
+        "needs_technical_evidence": false
+      },
+      {
+        "id": "A.2.2",
+        "title": "AI Policies \u2014 Alignment",
+        "obligation": "Ensure AI policies are aligned with and integrated into other organizational policies covering relevant areas such as ethics, compliance, and risk management.",
+        "needs_technical_evidence": false
+      },
+      {
+        "id": "A.2.3",
+        "title": "AI Policies \u2014 Review and Update",
+        "obligation": "Regularly review, assess, and update organizational AI policies to remain relevant and effective in response to changes in technology, regulations, and organizational context.",
+        "needs_technical_evidence": false
+      },
+      {
+        "id": "A.3.1",
+        "title": "Internal Organization \u2014 Roles and Responsibilities",
+        "obligation": "Define and document AI roles, responsibilities, and authorities within the organization, including clear assignment of accountability for AI governance.",
+        "needs_technical_evidence": false
+      },
+      {
+        "id": "A.3.2",
+        "title": "Internal Organization \u2014 Reporting of Concerns",
+        "obligation": "Establish and maintain processes for reporting concerns and issues related to AI systems, ensuring reporting mechanisms are accessible and non-retaliation is protected.",
+        "needs_technical_evidence": false
+      },
+      {
+        "id": "A.4.1",
+        "title": "Resources \u2014 AI System Documentation and Inventory",
+        "obligation": "Document and maintain an inventory of all AI system components, assets, and resources used in AI development, deployment, and operation.",
+        "needs_technical_evidence": true
+      },
+      {
+        "id": "A.4.2",
+        "title": "Resources \u2014 Data Resources",
+        "obligation": "Identify and document data resources required for AI systems, including data provenance, quality requirements, and management throughout the AI lifecycle.",
+        "needs_technical_evidence": true
+      },
+      {
+        "id": "A.4.3",
+        "title": "Resources \u2014 Tools and Technologies",
+        "obligation": "Identify and document tools, platforms, and technologies required for AI system development, testing, deployment, and monitoring.",
+        "needs_technical_evidence": true
+      },
+      {
+        "id": "A.4.4",
+        "title": "Resources \u2014 Computing Resources",
+        "obligation": "Identify and allocate computing resources (infrastructure, storage, processing capacity) required to support AI systems and ensure adequate system performance.",
+        "needs_technical_evidence": true
+      },
+      {
+        "id": "A.4.5",
+        "title": "Resources \u2014 Human Competence",
+        "obligation": "Ensure personnel involved in AI system development and operation have necessary competencies, and establish processes for training, development, and competency management.",
+        "needs_technical_evidence": true
+      },
+      {
+        "id": "A.5.1",
+        "title": "Assessing Impacts of AI Systems \u2014 Objective",
+        "obligation": "Assess and document how AI systems impact individuals, groups of individuals, and society throughout the AI system's entire lifecycle from design through decommissioning.",
+        "needs_technical_evidence": true
+      },
+      {
+        "id": "A.5.2",
+        "title": "Assessing Impacts of AI Systems \u2014 Impact Assessment Process",
+        "obligation": "Establish and implement a structured AI system impact assessment process that identifies, analyzes, and documents potential impacts on privacy, fairness, safety, security, and societal effects.",
+        "needs_technical_evidence": true
+      },
+      {
+        "id": "A.5.3",
+        "title": "Assessing Impacts of AI Systems \u2014 Documented Results",
+        "obligation": "Document the results of AI system impact assessments and maintain records of findings, risk mitigation actions, and decisions made regarding identified impacts.",
+        "needs_technical_evidence": true
+      },
+      {
+        "id": "A.5.4",
+        "title": "Assessing Impacts of AI Systems \u2014 Impact on Individuals",
+        "obligation": "Specifically assess and document potential impacts of AI systems on individuals, including discrimination, privacy violations, and adverse effects on fundamental rights.",
+        "needs_technical_evidence": true
+      },
+      {
+        "id": "A.5.5",
+        "title": "Assessing Impacts of AI Systems \u2014 Reassessment Triggers",
+        "obligation": "Reassess AI system impacts when changes occur to the system, its context, data inputs, deployment environment, or regulatory landscape, and update impact assessments accordingly.",
+        "needs_technical_evidence": true
+      },
+      {
+        "id": "A.7.1",
+        "title": "Data for AI Systems \u2014 Data Management Objective",
+        "obligation": "Establish processes to understand and manage the role and impact of data used in AI system development, training, enhancement, and operation throughout the lifecycle.",
+        "needs_technical_evidence": true
+      },
+      {
+        "id": "A.7.2",
+        "title": "Data for AI Systems \u2014 Development and Enhancement Data",
+        "obligation": "Establish requirements and processes for data used in AI system development and enhancement, including quality, relevance, and representativeness standards.",
+        "needs_technical_evidence": true
+      },
+      {
+        "id": "A.7.3",
+        "title": "Data for AI Systems \u2014 Data Acquisition",
+        "obligation": "Establish processes for acquiring data, including assessment of data sources, validation of data rights, regulatory compliance, and documentation of data provenance.",
+        "needs_technical_evidence": true
+      },
+      {
+        "id": "A.7.4",
+        "title": "Data for AI Systems \u2014 Data Quality",
+        "obligation": "Establish and maintain data quality standards, assess data completeness and accuracy, identify and address data gaps, biases, and quality issues.",
+        "needs_technical_evidence": true
+      },
+      {
+        "id": "A.7.5",
+        "title": "Data for AI Systems \u2014 Data Provenance and Governance",
+        "obligation": "Document and maintain records of data provenance, including sources, collection methods, transformations, and governance to ensure data traceability and accountability.",
+        "needs_technical_evidence": true
+      },
+      {
+        "id": "A.7.6",
+        "title": "Data for AI Systems \u2014 Data Preparation",
+        "obligation": "Establish processes for data preparation, cleaning, transformation, and annotation, including documentation of preprocessing methods and data modifications.",
+        "needs_technical_evidence": true
+      },
+      {
+        "id": "A.8.1",
+        "title": "Information for Interested Parties \u2014 Communication Objective",
+        "obligation": "Establish processes to provide relevant, accurate, and timely information about AI systems to interested parties, including functionality, limitations, and risks.",
+        "needs_technical_evidence": true
+      },
+      {
+        "id": "A.8.2",
+        "title": "Information for Interested Parties \u2014 AI System Information Disclosure",
+        "obligation": "Communicate to users and stakeholders information about how AI systems work, their purposes, limitations, known risks, and potential impacts on individuals or society.",
+        "needs_technical_evidence": true
+      },
+      {
+        "id": "A.8.3",
+        "title": "Information for Interested Parties \u2014 Feedback and Escalation",
+        "obligation": "Establish mechanisms for interested parties to provide feedback, raise concerns, and escalate issues regarding AI system performance, fairness, and impacts.",
+        "needs_technical_evidence": false
+      },
+      {
+        "id": "A.9.1",
+        "title": "Use of AI Systems \u2014 Use Case Management",
+        "obligation": "Ensure that AI systems are deployed and used only for intended purposes, with documented use cases, controls to prevent misuse, and monitoring of actual usage.",
+        "needs_technical_evidence": true
+      },
+      {
+        "id": "A.9.2",
+        "title": "Use of AI Systems \u2014 User Training and Awareness",
+        "obligation": "Provide training and awareness to users and operators of AI systems to ensure appropriate, responsible, and effective use of AI systems.",
+        "needs_technical_evidence": false
+      },
+      {
+        "id": "A.10.1",
+        "title": "Third-Party and Customer Relationships \u2014 Supplier Selection",
+        "obligation": "Establish processes to assess and select suppliers and third parties providing AI systems or AI-related services based on their ability to meet responsible AI requirements.",
+        "needs_technical_evidence": true
+      },
+      {
+        "id": "A.10.2",
+        "title": "Third-Party and Customer Relationships \u2014 Supplier Agreements",
+        "obligation": "Establish contractual agreements with suppliers and third parties that define responsibilities for AI governance, security, data protection, impact assessment, and compliance.",
+        "needs_technical_evidence": true
+      },
+      {
+        "id": "A.10.3",
+        "title": "Third-Party and Customer Relationships \u2014 Supplier Monitoring",
+        "obligation": "Monitor supplier and third-party performance in meeting responsible AI requirements, request evidence of certifications or assessments, and maintain oversight of AI-related services.",
+        "needs_technical_evidence": true
+      },
+      {
+        "id": "A.10.4",
+        "title": "Third-Party and Customer Relationships \u2014 Customer Transparency",
+        "obligation": "When providing AI systems to customers, establish processes to transparently communicate system functionality, limitations, risks, and provide channels for customer feedback.",
+        "needs_technical_evidence": true
+      },
+      {
+        "id": "A.6.1.1",
+        "title": "Process for responsible AI system design and development",
+        "obligation": "Define and document a process for the responsible design and development of AI systems.",
+        "needs_technical_evidence": true
+      },
+      {
+        "id": "A.6.1.2",
+        "title": "Objectives for responsible AI system design and development",
+        "obligation": "Identify and document objectives (e.g., reliability, robustness, fairness, transparency, safety, security, privacy) to guide responsible AI development.",
+        "needs_technical_evidence": true
+      },
+      {
+        "id": "A.6.2.2",
+        "title": "AI system requirements and specification",
+        "obligation": "Specify and document the requirements for the AI system, including performance, data, and trustworthiness requirements.",
+        "needs_technical_evidence": true
+      },
+      {
+        "id": "A.6.2.3",
+        "title": "Documentation of AI system design and development",
+        "obligation": "Document the AI system design and development, including model/algorithm choices and controls from impact assessment.",
+        "needs_technical_evidence": true
+      },
+      {
+        "id": "A.6.2.4",
+        "title": "AI system verification and validation",
+        "obligation": "Define and use verification and validation measures, and document criteria/results, to assess the AI system against performance, safety, robustness, fairness, and reliability requirements before deployment.",
+        "needs_technical_evidence": true
+      },
+      {
+        "id": "A.6.2.5",
+        "title": "AI system deployment",
+        "obligation": "Document a deployment plan and confirm that requirements are met prior to deployment.",
+        "needs_technical_evidence": true
+      },
+      {
+        "id": "A.6.2.6",
+        "title": "AI system operation and monitoring",
+        "obligation": "Define and document elements needed for ongoing operation and monitoring of the AI system, including detection of drift, degradation, and emerging risks.",
+        "needs_technical_evidence": true
+      },
+      {
+        "id": "A.6.2.7",
+        "title": "AI system technical documentation",
+        "obligation": "Determine and provide the technical documentation needed by relevant interested parties (e.g., users, partners, authorities).",
+        "needs_technical_evidence": true
+      },
+      {
+        "id": "A.6.2.8",
+        "title": "AI system recording of event logs",
+        "obligation": "Determine and document the phases/needs for automatically recording event logs over the AI system lifecycle.",
+        "needs_technical_evidence": true
+      }
+    ],
+    "_iso_a6_note": "A.6 controls corrected to official ISO/IEC 42001:2023 Annex A numbering (A.6.2.4 = verification and validation; A.6.2.5 = deployment; A.6.2.6 = operation and monitoring). The initial extraction used a non-official ordering."
+  }
+]

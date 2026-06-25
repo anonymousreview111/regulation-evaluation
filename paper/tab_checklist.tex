@@ -1,0 +1,25 @@
+% T7 — practitioner conformity-evidence checklist
+\begin{table*}[!tp]
+\centering
+\caption{Practitioner conformity-evidence checklist. For each cross-framework obligation
+cluster, the recommended technical evaluation evidence and the supplying method family.
+Clause identifiers are indicative; deployers must confirm applicability to their system. \textbf{Takeaway:} each obligation cluster maps to a small, named set of evaluations and a single supplying family, so one well-documented evidence dossier can be re-indexed against all three frameworks at once.}
+\label{tab:checklist}
+\footnotesize
+\begin{tabular}{p{0.22\textwidth}p{0.40\textwidth}p{0.13\textwidth}p{0.16\textwidth}}
+\toprule
+Obligation cluster & Recommended technical evidence & Family & Clauses (NIST / EU / ISO)\\
+\midrule
+Accuracy \& performance & Held-out and OOD test results with metrics, confidence intervals, calibration & M1, M7 & ME 2.3 / Art.15 / A.6.2.4\\
+Robustness \& security & Adversarial-robustness tests, red-team/jailbreak reports, certified bounds where feasible & M3, M5 & ME 2.6--2.7 / Art.15 / A.6.2.4\\
+Fairness \& non-discrimination & Subgroup performance, bias-benchmark results, counterfactual/action-level disparity & M2 & ME 2.11 / Art.10,15 / A.5\\
+Data governance & Datasheets/data cards, provenance and contamination audits, representativeness analysis & M8 & MAP / Art.10 / A.7\\
+Transparency \& documentation & Model/system card, technical documentation dossier (Annex IV), FactSheet & M9 & ME 2.8 / Art.11,13 / A.8\\
+Explainability & Attribution/explanation outputs with faithfulness evaluation & M6 & ME 2.9 / Art.13 / A.6.2.4\\
+Human oversight & Oversight-effectiveness and appropriate-reliance evidence, escalation paths & M10 & GOVERN / Art.14 / A.9\\
+Risk management (process) & The above, organized into a documented risk-management/impact-assessment process & all & GOVERN/MANAGE / Art.9 / A.5\\
+Privacy & Membership-inference/extraction testing, differential-privacy guarantees, model-inversion resistance & M12 & ME 2.10 / Art.10 / A.7\\
+Post-market monitoring & Drift/runtime monitors, logging, incident reporting, continuous re-evaluation & M11 & MANAGE / Art.12,72 / A.6.2.6\\
+\bottomrule
+\end{tabular}
+\end{table*}

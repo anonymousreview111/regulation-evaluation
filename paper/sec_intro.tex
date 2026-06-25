@@ -1,0 +1,84 @@
+\PARstart{A}{rtificial} intelligence systems are now deployed in settings where errors carry
+consequences for safety, livelihoods, and fundamental rights: hiring, credit, clinical
+decision support, critical infrastructure, and increasingly autonomous, tool-using
+agents. In response, a converging body of governance instruments now asks developers and
+deployers of such \emph{high-risk} systems to \emph{demonstrate}, rather than merely
+assert, that their systems are trustworthy. In the United States, the National Institute
+of Standards and Technology (NIST) AI Risk Management Framework (AI RMF~1.0) establishes a
+voluntary but widely referenced structure for identifying, measuring, and managing AI
+risk~\cite{nist2023airmf}, complemented by a Generative AI Profile~\cite{nist2024genai}.
+In the European Union, the AI Act, Regulation (EU)~2024/1689, imposes binding
+obligations on high-risk systems, including risk management, data governance, technical
+documentation, logging, transparency, human oversight, and accuracy, robustness, and
+cybersecurity~\cite{euaiact2024}. Internationally, ISO/IEC~42001:2023 specifies a
+certifiable AI management system with controls spanning the AI life
+cycle~\cite{iso42001}. Together these frameworks define the conformity surface that a
+high-risk AI system must satisfy.
+
+A recurring word in all three instruments is \emph{evidence}: conformity is established
+by demonstrable, documented results, not by good intentions. Yet the frameworks are
+deliberately written at the level of \emph{outcomes} and \emph{processes} (``the system
+shall achieve appropriate levels of accuracy and robustness,'' ``fairness and bias shall
+be evaluated and managed'') and do not prescribe \emph{which} technical evaluation
+methods produce the required evidence. In parallel, a large and fast-moving technical
+literature has produced concrete methods for evaluating AI systems: fairness and bias
+benchmarks, adversarial-robustness tests, red-teaming and jailbreak suites,
+interpretability and explanation-faithfulness analyses, calibration and uncertainty
+quantification, data and model documentation, human-oversight studies, and post-deployment
+monitoring. These two worlds, the regulatory and the technical, have largely developed
+in isolation. A practitioner asking the operational question, ``\emph{which evaluation do
+I run to evidence this obligation?},'' finds no systematic answer in the engineering
+literature.
+
+\textbf{Contribution.} This article provides that answer. Prior work has mapped regulatory
+concepts to \emph{standards} and compared frameworks pairwise (Section~\ref{sec:related});
+our contribution is, to our knowledge, the first \emph{unified} crosswalk of concrete AI
+evaluation methods to the \emph{simultaneous} requirements of all three frameworks (NIST
+AI RMF, the EU AI Act, and ISO/IEC~42001) in the technical and engineering literature retrieved by our search, together with a
+practitioner playbook for assembling cross-framework conformity evidence. Our central
+question is operational: which technical evaluation evidence supports conformity with which
+NIST AI RMF function and subcategory, which EU AI Act high-risk obligation (Articles
+9--15), and which ISO/IEC~42001 Annex~A control. The signature artifact is a
+\emph{methods $\times$ requirements mapping matrix} (Table~\ref{tab:matrix},
+Fig.~\ref{fig:heatmap}) in which each cell records the technical relevance (primary,
+supporting, or contextual) that a method family supplies for a requirement, grounded in the
+official clause text and the verified primary literature. The mapping is a structured,
+auditable argument graded by technical relevance, not a deterministic compliance verdict. From the matrix we derive a
+\emph{gap analysis} (Section~\ref{sec:gaps}) that identifies requirements weakly served
+or unserved by current technical methods, including a structural \emph{measurement gap}
+for agentic systems whose behavior, rather than whose token-level outputs, must be
+assessed.
+
+\textbf{Positioning.} Existing treatments of AI regulation are predominantly legal or
+comparative: jurisdictional overviews of global governance
+requirements~\cite{global2024governance}, framework-to-framework crosswalks, and
+standards-concept mappings~\cite{hernandez2024knowledgegraph}. Valuable as these are,
+none bridges from \emph{technical evaluation methods} to regulatory requirements at the
+level an engineer can act on. Conversely, technical surveys of evaluation
+methods~\cite{chang2024survey,yehudai2025survey} catalogue methods without reference to
+conformity obligations. We build the engineering bridge between the two, and we
+state that position explicitly. We also situate two prior, unpublished
+frameworks---one for structured high-stakes evaluation and one for per-component agent
+fairness (citations withheld for double-blind review)---as instances within the broader
+method taxonomy, mentioned as context rather than as independent evidence and therefore
+not listed in the references.
+
+\textbf{Scope and framing.} We focus on high-risk and high-stakes AI, including large
+language models (LLMs) and agentic systems, and we adopt a US-forward framing that leads
+with the NIST AI RMF and the US assurance ecosystem before turning to the EU and
+international instruments. The taxonomy comprises twelve method families; eleven are
+established, while privacy evaluation (M12) is included for completeness but is comparatively
+emerging and thinly covered, as we note in its analysis. We follow a structured, transparent review protocol for a reproducible,
+auditable synthesis, and we verify cited works and regulatory claims against official
+sources where publicly accessible. This article is a technical review and does \emph{not} constitute legal
+advice; the mapping is an engineering interpretation intended to guide evaluation
+practice.
+
+\textbf{Roadmap.} Section~\ref{sec:background} introduces the three frameworks and their
+shared lifecycle spine. Section~\ref{sec:related} positions the work.
+Section~\ref{sec:method} details the review methodology. Section~\ref{sec:taxonomy}
+presents the taxonomy of twelve technical evaluation method families.
+Section~\ref{sec:mapping} presents the mapping---the contribution.
+Section~\ref{sec:gaps} analyzes the gaps. Section~\ref{sec:discussion} translates the
+mapping into a practitioner conformity-evidence playbook. Sections~\ref{sec:limits}
+through~\ref{sec:conclusion} discuss limitations, open challenges, and conclusions.

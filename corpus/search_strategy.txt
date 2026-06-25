@@ -1,0 +1,43 @@
+Database-specific Boolean search strings (term groups defined below; search reproducibility companion)
+Paper: Evaluating High-Risk AI for Regulatory Conformity (Artificial Intelligence Review)
+Last search: June 2026. Window: 2015-2026 (LLM/agentic emphasis 2022-2026). Language: English.
+
+Term groups
+  SYSTEM   = ("artificial intelligence" OR "machine learning" OR "deep learning" OR
+              "large language model" OR LLM OR "foundation model" OR "AI agent" OR agentic)
+  EVAL     = (evaluation OR assessment OR audit OR benchmark OR testing OR assurance OR
+              "conformity assessment" OR verification OR validation)
+  METHOD   = (fairness OR bias OR robustness OR adversarial OR safety OR "red team" OR
+              "red-teaming" OR interpretability OR explainability OR calibration OR
+              uncertainty OR "data governance" OR "model card" OR datasheet OR
+              "human oversight" OR monitoring OR "drift detection")
+  GOV      = ("NIST AI RMF" OR "AI Risk Management Framework" OR "EU AI Act" OR
+              "Regulation (EU) 2024/1689" OR "ISO/IEC 42001" OR "conformity assessment" OR
+              "high-risk AI")
+
+--------------------------------------------------------------------------------
+IEEE Xplore (Command Search; metadata)
+  ("All Metadata":SYSTEM) AND ("All Metadata":EVAL) AND ("All Metadata":METHOD)
+  Filters: 2015-2026; English. Governance pass: ("All Metadata":GOV) AND ("All Metadata":EVAL).
+
+ACM Digital Library (Advanced Search; Abstract)
+  Abstract:(SYSTEM) AND Abstract:(EVAL) AND Abstract:(METHOD)
+  Filters: 2015-2026.
+
+Scopus (TITLE-ABS-KEY)
+  TITLE-ABS-KEY(SYSTEM) AND TITLE-ABS-KEY(EVAL) AND TITLE-ABS-KEY(METHOD)
+  AND PUBYEAR > 2014 AND ( LIMIT-TO(LANGUAGE,"English") )
+  Governance pass: TITLE-ABS-KEY(GOV) AND TITLE-ABS-KEY(EVAL).
+
+Web of Science (TS = Topic)
+  TS=(SYSTEM) AND TS=(EVAL) AND TS=(METHOD)
+  Timespan 2015-2026; document types: Article, Review, Proceedings Paper.
+
+arXiv (cs.LG, cs.AI, cs.CY, cs.CR, stat.ML; via API/listing)
+  (abs:SYSTEM AND abs:EVAL AND abs:METHOD) in the listed categories; 2015-2026.
+  Governance pass: abs:GOV AND abs:EVAL.
+
+Snowballing: forward/backward citation tracing of included records via Google Scholar.
+Official corpus (hand-collected, not via the above queries): NIST AI 100-1, NIST AI 600-1,
+EUR-Lex Reg. (EU) 2024/1689, ISO/IEC 42001:2023, ISO/IEC 23894:2023.
+Reused corpus: authors' prior arXiv-verified agent-fairness corpus (202 entries).

@@ -1,0 +1,148 @@
+key,family,year,id,title
+hendrycks2020mmlu,M1,2020,2009.03300,Measuring Massive Multitask Language Understanding
+srivastava2023bigbench,M1,2023,2206.04615,Beyond the Imitation Game: Quantifying and extrapolating the capabilities of language models
+mitchell2019modelcards,M1,2019,1810.03993,Model Cards for Model Reporting
+gebru2018datasheets,M1,2018,1803.09010,Datasheets for Datasets
+wang2019superglue,M1,2019,1905.00537,SuperGLUE: A Stickier Benchmark for General-Purpose Language Understanding Systems
+li2024oodobustbench,M1,2024,2310.12793,OODRobustBench: a Benchmark and Large-Scale Analysis of Adversarial Robustness under Distribution Shift
+le2024revisiting,M1,2025,2505.23854,Revisiting Uncertainty Estimation and Calibration of Large Language Models
+lundberg2017shap,M1,2017,1705.07874,A Unified Approach to Interpreting Model Predictions
+ribeiro2016lime,M1,2016,1602.04938,"""Why Should I Trust You?"": Explaining the Predictions of Any Classifier"
+dong2023promptrobust,M1,2023,2306.04528,PromptRobust: Towards Evaluating the Robustness of Large Language Models on Adversarial Prompts
+anil2024agentarch,M1,2025,2509.10769,AgentArch: A Comprehensive Benchmark to Evaluate Agent Architectures in Enterprise
+song2025multidimensional,M1,2025,2511.14136,Beyond Accuracy: A Multi-Dimensional Framework for Evaluating Enterprise Agentic AI Systems
+wang2023maps,M1,2025,2505.15935,MAPS: A Multilingual Benchmark for Agent Performance and Security
+nist2023ai_rmf,M1,2023,https://nvlpubs.nist.gov/nistpubs/ai/nist.ai.100-1.pdf,AI Risk Management Framework (AI RMF 1.0)
+hendrycks2024haulaeval,M1,2026,2602.01031,HalluHard: A Hard Multi-Turn Hallucination Benchmark
+hendrycks2019corruption,M3,2019,1903.12261,Benchmarking Neural Network Robustness to Common Corruptions and Perturbations
+cohen2019certified,M3,2019,1902.02918,Certified Adversarial Robustness via Randomized Smoothing
+hendrycks2019natural,M3,2021,1907.07174,Natural Adversarial Examples
+arjovsky2019irm,M3,2019,1907.02893,Invariant Risk Minimization
+koh2021wilds,M3,2020,2012.07421,WILDS: A Benchmark of in-the-Wild Distribution Shifts
+carlini2016c2,M3,2016,1608.04644,Towards Evaluating the Robustness of Neural Networks
+madry2018pgd,M3,2017,1706.06083,Towards Deep Learning Models Resistant to Adversarial Attacks
+smoothllm2023,M3,2023,2310.03684,SmoothLLM: Defending Large Language Models Against Jailbreaking Attacks
+jailbreakbench2024,M3,2024,2404.01318,JailbreakBench: An Open Robustness Benchmark for Jailbreaking Large Language Models
+liang2024ood,M3,2024,2409.11884,Out-of-Distribution Detection: A Task-Oriented Survey of Recent Advances
+tta2024realistic,M3,2024,2407.14231,Realistic Evaluation of Test-Time Adaptation Algorithms: Unsupervised Hyperparameter Selection
+poisonbench2024,M3,2024,2410.08811,PoisonBench: Assessing Large Language Model Vulnerability to Data Poisoning
+brittlebench2025,M3,2026,2603.13285,Brittlebench: Quantifying LLM robustness via prompt sensitivity
+gehman2020realtoxicity,M4,2020,2009.07839,RealToxicityPrompts: Evaluating Neural Toxic Degeneration in Language Models
+lin2021truthfulqa,M4,2021,2109.07958,TruthfulQA: Measuring How Models Mimic Human Falsehoods
+wang2023safetybench,M4,2023,2309.07045,SafetyBench: Evaluating the Safety of Large Language Models with Multiple Choice Questions
+suzgun2022bigbenchhard,M4,2022,2210.09261,Challenging BIG-Bench Tasks and Whether Chain-of-Thought Can Solve Them
+dai2024saferlhf,M4,2024,2310.12773,Safe RLHF: Safe Reinforcement Learning from Human Feedback
+hawkins2025safetycaseai,M4,2025,2601.22773,A Structured Approach to Safety Case Construction for AI Systems
+hendel2024dangerouseval,M4,2024,2403.13793,Evaluating Frontier Models for Dangerous Capabilities
+akhtar2024jailbreakeval,M4,2024,2406.09321,JailbreakEval: An Integrated Toolkit for Evaluating Jailbreak Attempts Against Large Language Models
+rajpurkar2016squad,M4,2016,1606.05250,"SQuAD: 100,000+ Questions for Machine Comprehension of Text"
+gal2025alignment,M4,2025,2510.11235,AI Alignment Strategies from a Risk Perspective: Independent Safety Mechanisms or Shared Failures?
+zou2023universal,M5,2023,2307.15043,Universal and Transferable Adversarial Attacks on Aligned Language Models
+carlini2023extracting,M5,2023,2310.08419,Jailbreaking Black Box Large Language Models in Twenty Queries
+mazeika2024harmbench,M5,2024,2402.04249,HarmBench: A Standardized Evaluation Framework for Automated Red Teaming and Robust Refusal
+hendrycks2023advbench,M5,2023,2308.10819,Evaluating the Instruction-Following Robustness of Large Language Models to Prompt Injection
+rai2024soft,M5,2024,2407.03391,Soft Begging: Modular and Efficient Shielding of LLMs against Prompt Injection and Jailbreaking based on Prompt Tuning
+wang2024indirect,M5,2024,2510.05244,"Indirect Prompt Injections: Are Firewalls All You Need, or Stronger Benchmarks?"
+zhang2024agent,M5,2024,2412.14470,Agent-SafetyBench: Evaluating the Safety of LLM Agents
+kang2025learning,M5,2026,2512.20677,Learning-Based Automated Adversarial Red-Teaming for Robustness Evaluation of Large Language Models
+liu2025automatic,M5,2025,2508.04451,Automatic LLM Red Teaming
+gu2025safesearch,M5,2025,2509.23694,SafeSearch: Automated Red-Teaming of LLM-Based Search Agents
+peng2025eu,M5,2025,2510.21524,EU-Agent-Bench: Measuring Illegal Behavior of LLM Agents Under EU Law
+wang2026systematic,M5,2026,2602.21267,A Systematic Review of Algorithmic Red Teaming Methodologies for Assurance and Security of AI Applications
+vaswani2017transformer,M6,2017,1706.03762,Attention Is All You Need
+kim2019tcav,M6,2019,1711.11279,Interpretability Beyond Feature Attribution: Quantitative Testing with Concept Activation Vectors (TCAV)
+jain2019attention_not_explanation,M6,2019,1902.10186,Attention is not Explanation
+tenney2019edge_probing,M6,2019,1905.06316,What do you learn from context? Probing for sentence structure in contextualized word representations
+sudre2024axiomatic_integrated_gradients,M6,2023,2306.13753,Four Axiomatic Characterizations of the Integrated Gradients Attribution Method
+yang2023measuring_faithfulness_cot,M6,2023,2307.13702,Measuring Faithfulness in Chain-of-Thought Reasoning
+turpin2024faithfulness_plausibility,M6,2024,2402.04614,Faithfulness vs. Plausibility: On the (Un)Reliability of Explanations from Large Language Models
+lanham2024positive_case_faithfulness,M6,2026,2602.02639,A Positive Case for Faithfulness: LLM Self-Explanations Help Predict Model Behavior
+zou2024cot_mechanistic,M6,2025,2507.22928,How does Chain of Thought Think? Mechanistic Interpretability of Chain-of-Thought Reasoning with Sparse Autoencoding
+yang2024xai_units,M6,2025,2506.01059,XAI-Units: Benchmarking Explainability Methods with Unit Tests
+zhang2024causal_tracing_vqa,M6,2025,2511.05923,Causal Tracing of Object Representations in Large Vision Language Models: Mechanistic Interpretability and Hallucination Mitigation
+guo2017calibration,M7,2017,1706.04599,On Calibration of Modern Neural Networks
+sensoy2018evidential,M7,2018,1806.01768,Evidential Deep Learning to Quantify Classification Uncertainty
+devries2018confidence,M7,2018,1802.04865,Learning Confidence for Out-of-Distribution Detection in Neural Networks
+gal2016bayesian,M7,2015,1506.02142,Dropout as a Bayesian Approximation: Representing Model Uncertainty in Deep Learning
+kuhn2023semantic,M7,2023,2302.09664,Semantic Uncertainty: Linguistic Invariances for Uncertainty Estimation in Natural Language Generation
+manakul2023selfcheckgpt,M7,2023,2303.08896,SelfCheckGPT: Zero-Resource Black-Box Hallucination Detection for Generative Large Language Models
+barella2023quantifying,M7,2023,2306.00876,Quantifying Deep Learning Model Uncertainty in Conformal Prediction
+srinivasan2024selective,M7,2024,2402.15610,Selective 'Selective Prediction': Reducing Unnecessary Abstention in Vision-Language Reasoning
+cresswell2024conformal,M7,2024,2401.13744,Conformal Prediction Sets Improve Human Decision Making
+kossen2024semantic,M7,2024,2406.15927,Semantic Entropy Probes: Robust and Cheap Hallucination Detection in LLMs
+ravi2026epistemic,M7,2026,2602.01667,Quantifying Epistemic Predictive Uncertainty in Conformal Prediction
+lamb2026temperature,M7,2026,2604.07172,Improving Semantic Uncertainty Quantification in Language Model Question-Answering via Token-Level Temperature Scaling
+angelopoulos2023conformal,M7,2021,2107.07511,A Gentle Introduction to Conformal Prediction and Distribution-Free Uncertainty Quantification
+wang2023calibration,M7,2023,2308.01222,Calibration in Deep Learning: A Survey of the State-of-the-Art
+pushkarna2022datacards,M8,2022,2204.01075,Data Cards: Purposeful and Transparent Dataset Documentation for Responsible AI
+pocock2021tribuo,M8,2021,2110.03022,Tribuo: Machine Learning with Provenance in Java
+liang2024whatsdocumented,M8,2024,2402.05160,What's documented in AI? Systematic Analysis of 32K AI Model Cards
+luccioni2023dataprovenance,M8,2023,2310.16787,The Data Provenance Initiative: A Large Scale Audit of Dataset Licensing & Attribution in AI
+ivanov2024benchmarks,M8,2024,2412.01020,AI Benchmarks and Datasets for LLM Evaluation
+staufer2025auditcards,M8,2025,2504.13839,Audit Cards: Contextualizing AI Evaluations
+winecoff2024governance,M8,2024,2409.08960,Improving governance outcomes through AI documentation: Bridging theory and practice
+raffel2024transparency,M8,2025,2407.12929,The 2024 Foundation Model Transparency Index
+lukoševičius2024contamination,M8,2025,2502.14425,A Survey on Data Contamination for Large Language Models
+liang2024representativeness,M8,2024,2407.00170,Dataset Representativeness and Downstream Task Fairness
+pan2024metrics,M8,2024,2406.19614,A Survey on Data Quality Dimensions and Tools for Machine Learning
+global2024governance,M8,2025,2512.02046,Global AI Governance Overview: Understanding Regulatory Requirements Across Global Jurisdictions
+weidinger2024aifactsheets,M9,2020,2006.13796,A Methodology for Creating AI FactSheets
+wan2025fmti,M9,2025,2512.10169,The 2025 Foundation Model Transparency Index
+shah2025aitransparencyatlas,M9,2025,2512.12443,"AI Transparency Atlas: Framework, Scoring, and Real-Time Model Card Evaluation Pipeline"
+lin2025evalcards,M9,2025,2511.21695,EvalCards: A Framework for Standardized Evaluation Reporting
+li2025aiagentindex,M9,2026,2602.17753,The 2025 AI Agent Index: Documenting Technical and Safety Features of Deployed Agentic AI Systems
+tong2024benchmarking,M9,2023,2311.12560,Benchmarking bias: Expanding clinical AI model card to incorporate bias reporting of social and non-social factors
+zhang2025transparentai,M9,2025,2506.21812,Towards Transparent AI: A Survey on Explainable Large Language Models
+liang2023aiglmsurvey,M9,2023,2303.18223,A Survey of Large Language Models
+yang2024evaluating,M9,2022,2201.13224,Evaluating a Methodology for Increasing AI Transparency: A Case Study
+mehdipour2025evaluation,M9,2025,2508.15503,Guidelines for Empirical Studies in Software Engineering involving Large Language Models
+qian2025benchmark2,M9,2026,2601.03986,Benchmark²: Systematic Evaluation of LLM Benchmarks
+pan2024modelreporting,M9,2023,2307.11525,Model Reporting for Certifiable AI: A Proposal from Merging EU Regulation into AI Development
+weidinger2023framework,M9,2023,2307.13658,Towards AI Transparency and Accountability: A Global Framework for Exchanging Information on AI Systems
+amershi2022trustcalibration,M10,2022,2205.02987,Tell Me Something That Will Help Me Trust You: A Survey of Trust Calibration in Human-Agent Interaction
+wang2023verifystepbystep,M10,2023,2305.20050,Let's Verify Step by Step
+chen2024reliancedrills,M10,2024,2409.14055,Monitoring Human Dependence On AI Systems With Reliance Drills
+wang2025mentalmodels,M10,2025,2510.08104,Development of Mental Models in Human-AI Collaboration: A Conceptual Framework
+liang2024stagedworkflows,M10,2024,2410.02054,"Designing Staged Evaluation Workflows for LLMs: Integrating Domain Experts, Lay Users, and Model-Generated Evaluation Criteria"
+wang2024xaibenchmark,M10,2024,2411.02470,Benchmarking XAI Explanations with Human-Aligned Evaluations
+reddy2025systemcards,M10,2025,2509.20394,Blueprints of Trust: AI System Cards for End to End Transparency and Governance
+tan2024agentassessment,M10,2025,2512.12791,Beyond Task Completion: An Assessment Framework for Evaluating Agentic AI Systems
+hou2025processrewardsurvey,M10,2025,2510.08049,A Survey of Process Reward Models: From Outcome Signals to Process Supervisions for Large Language Models
+krause2023interactivealignment,M10,2023,2311.00710,"Interactive AI Alignment: Specification, Process, and Evaluation Alignment"
+cui2024escalation,M10,2025,2508.01056,Managing Escalation in Off-the-Shelf Large Language Models
+tan2025constitutionalai,M10,2025,2502.15861,C3AI: Crafting and Evaluating Constitutions for Constitutional AI
+leest2025contextaware,M11,2025,2506.10770,From Tea Leaves to System Maps: A Survey and Framework on Context-aware Machine Learning Monitoring
+greco2024driftlens,M11,2024,2406.17813,Unsupervised Concept Drift Detection from Deep Learning Representations in Real-time
+monitoring2025hallucination,M11,2025,2503.03106,Monitoring Decoding: Mitigating Hallucination via Evaluating the Factuality of Partial Response during Generation
+mitigating2025hallucination,M11,2025,2508.03860,Hallucination to Truth: A Review of Fact-Checking and Factuality Evaluation in Large Language Models
+auditing2024frontier,M11,2026,2601.11699,Frontier AI Auditing: Toward Rigorous Third-Party Assessment of Safety and Security Practices at Leading AI Companies
+aisystem2024evaluation,M11,2024,2404.05388,"An AI System Evaluation Framework for Advancing AI Safety: Terminology, Taxonomy, Lifecycle Mapping"
+compliance2025pasta,M11,2026,2601.11702,PASTA: A Scalable Framework for Multi-Policy AI Compliance Evaluation
+incidents2025harms,M11,2025,2505.04291,From Incidents to Insights: Patterns of Responsibility following AI Harms
+governance2025adaptive,M11,2025,2510.03368,An Adaptive Responsible AI Governance Framework for Decentralized Organizations
+riskmanagement2025nist,M11,2023,https://doi.org/10.6028/NIST.AI.600-1,NIST AI Risk Management Framework 1.0
+neuralnetwork2024robustness,M11,2024,2405.01978,Quantifying Distribution Shifts and Uncertainties for Enhanced Model Robustness in Machine Learning Applications
+audit2025responsible,M11,2025,2509.11332,"A five-layer framework for AI governance: integrating regulation, standards, and certification"
+nist2023airiskmgmt,GOV,2023,https://doi.org/10.6028/NIST.AI.100-1,Artificial Intelligence Risk Management Framework (AI RMF 1.0)
+hernandez2024knowledgegraph,GOV,2024,2408.11925,An Open Knowledge Graph-Based Approach for Mapping Concepts and Requirements between the EU AI Act and International Standards
+hodac2024fundamentalrights,GOV,2024,2402.16869,Considering Fundamental Rights in the European Standardisation of Artificial Intelligence: Nonsense or Strategic Alliance?
+meding2025algorithmicdiscrimination,GOV,2025,2501.12962,It's complicated. The relationship of algorithmic fairness and non-discrimination provisions for high-risk systems in the EU AI Act
+rintamaki2025ontology,GOV,2024,2501.10391,Developing an Ontology for AI Act Fundamental Rights Impact Assessments
+almaamari2025crossregional,GOV,2025,2503.05773,"Between Innovation and Oversight: A Cross-Regional Study of AI Risk Management Frameworks in the EU, U.S., UK, and China"
+puhlfurss2025modelcards,GOV,2025,2507.06014,Model Cards Revisited: Bridging the Gap Between Theory and Practice for Ethical AI Requirements
+lupo2026trustworthyposture,GOV,2026,2603.03340,Trustworthy AI Posture (TAIP): A Framework for Continuous AI Assurance of Agentic Systems at Horizontal and Vertical scale
+lucaj2025techops,GOV,2025,2508.08804,TechOps: Technical Documentation Templates for the AI Act
+gadekallu2025responsibleaisurvey,GOV,2025,2504.13979,"Framework, Standards, Applications and Best practices of Responsible AI: A Comprehensive Survey"
+dubois2024alpacaeval,M1,2024,2404.04475,Length-Controlled AlpacaEval: A Simple Way to Debias Automatic Evaluators
+guo2024reliance,M10,2024,2401.15356,A Decision Theoretic Framework for Measuring AI Reliance
+romeo2025automationbias,M10,2025,10.1007/s00146-025-02422-7,Exploring automation bias in human-AI collaboration: a review and implications for explainable AI
+goodfellow2015explaining,M3,2015,1412.6572,Explaining and Harnessing Adversarial Examples
+amini2020deepevidential,M7,2020,1910.02600,Deep Evidential Regression
+greshake2023notwhat,M5,2023,2302.12173,Not What You've Signed Up For: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection
+pineau2020reproducibility,M9,2020,2003.12206,Improving Reproducibility in Machine Learning Research (A Report from the NeurIPS 2019 Reproducibility Program)
+shokri2017membership,M12,2017,1610.05820,Membership Inference Attacks against Machine Learning Models
+carlini2022firstprinciples,M12,2022,2112.03570,Membership Inference Attacks From First Principles
+carlini2021extracting,M12,2021,2012.07805,Extracting Training Data from Large Language Models
+staab2023memorization,M12,2023,2310.07298,Beyond Memorization: Violating Privacy Via Inference with Large Language Models
+abadi2016dp,M12,2016,1607.00133,Deep Learning with Differential Privacy
+neel2023privacy,M12,2023,2312.06717,Privacy Issues in Large Language Models: A Survey

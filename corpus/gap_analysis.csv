@@ -1,0 +1,23 @@
+framework,req,label,#direct,heat,maturity,gap_note
+NIST,GV,NIST GOVERN,0,11,Narrow,Governance is process-oriented; technical eval contributes documentation evidence only.
+NIST,MAP,NIST MAP,1,21,Moderate,
+NIST,M2.3,ME 2.3 Acc.,1,12,Moderate,
+NIST,M2.6,ME 2.6 Safety,1,18,Moderate,
+NIST,M2.7,ME 2.7 Sec.,2,12,Moderate,
+NIST,M2.9,ME 2.9 Expl.,1,7,Moderate,
+NIST,M2.10,ME 2.10 Priv.,0,7,Narrow,"Privacy-evaluation methods (membership inference, differential privacy) are established but function as vulnerability tests; full privacy assurance for LLMs/agents is under-served."
+NIST,M2.11,ME 2.11 Fair,1,14,Moderate,Model-level fairness evaluation is well developed; action-level/agentic disparity measurement is a structural gap.
+NIST,MG,NIST MANAGE,0,21,Narrow,
+EU,A9,Art.9,0,20,Narrow,"EU Article 9 risk management is a process obligation: technical evaluations are inputs to, not a substitute for, the risk-management system."
+EU,A10,Art.10,1,10,Moderate,
+EU,A11,Art.11,1,23,Moderate,
+EU,A12,Art.12,1,4,Moderate,Logging/record-keeping is an engineering capability; few evaluation methods assess log adequacy for reconstruction.
+EU,A13,Art.13,2,21,Moderate,
+EU,A14,Art.14,1,14,Moderate,"Human-oversight effectiveness evaluation (automation bias, appropriate reliance) is nascent relative to the obligation."
+EU,A15,Art.15,3,21,Broad,
+ISO,IA5,A.5 Impact,0,20,Narrow,"AI impact-assessment is a process obligation; methods exist but lack standardized, quantitative evaluation instruments, so no family has primary relevance."
+ISO,IA6,A.6.2.4 V&V,4,26,Broad,
+ISO,IA7,A.7 Data,2,13,Moderate,
+ISO,IA8,A.8 Info,2,22,Moderate,
+ISO,IA626,A.6.2.6 Mon.,1,18,Moderate,
+ISO,IA10,A.10 3rd-pty,0,11,Narrow,ISO A.10 third-party and customer relationships is served by supplier-assurance processes; few technical evaluation methods are primarily relevant to it.

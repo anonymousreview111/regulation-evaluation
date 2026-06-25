@@ -1,0 +1,153 @@
+%% ============================================================================
+%% LOCAL-PREVIEW FALLBACK ONLY -- NOT THE SUBMISSION FILE.
+%% The IEEE Access submission file is paper/main_ieeeaccess.tex (\documentclass{ieeeaccess}).
+%% This wrapper uses the generic IEEEtran journal class so the paper compiles on a base
+%% TeX install without the Access assets; it shares the identical body (sec_*.tex/tab_*.tex).
+%% Official template: https://www.overleaf.com/latex/templates/ieee-access-latex-template
+%% ============================================================================
+\documentclass[journal]{IEEEtran}
+
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{makecell}
+\usepackage{pifont}
+\usepackage{rotating}
+\usepackage{url}
+\usepackage{wasysym}   % \CIRCLE \LEFTcircle \Circle -- consistent with heatmap glyphs
+\providecommand{\PARstart}{\IEEEPARstart}  % ieeeaccess.cls defines \PARstart; map it for the IEEEtran preview
+
+% Float-placement tuning so wide table*/figure* floats sit near their references
+% instead of piling up after the bibliography.
+\setcounter{topnumber}{3}\setcounter{bottomnumber}{2}\setcounter{totalnumber}{5}
+\setcounter{dbltopnumber}{3}
+\renewcommand{\topfraction}{0.92}\renewcommand{\bottomfraction}{0.85}
+\renewcommand{\textfraction}{0.06}\renewcommand{\floatpagefraction}{0.7}
+\renewcommand{\dbltopfraction}{0.92}\renewcommand{\dblfloatpagefraction}{0.7}
+
+% Mapping-matrix evidence glyphs (match the heatmap: filled / half / open circle)
+\newcommand{\direct}{\CIRCLE}       % filled circle = direct
+\newcommand{\partialev}{\LEFTcircle}% half circle = partial
+\newcommand{\indirect}{\Circle}     % open circle = indirect
+
+\begin{document}
+
+\title{Evaluating High-Risk AI for Regulatory Conformity: A Review of Technical
+Assessment Methods Mapped to the NIST AI RMF, EU AI Act, and ISO/IEC~42001}
+
+\author{[author withheld]~and~the second coder~Singh%
+\thanks{R. R. [author withheld] is with [affiliation withheld], Miami, FL 33199 USA (e-mail: [email withheld]; ORCID: [ORCID withheld]).}%
+\thanks{M. Singh is with [affiliation withheld], Boston, MA 02215 USA (e-mail: [email withheld]; ORCID: 0000-0003-2368-2377).}%
+\thanks{Corresponding author: [author withheld].}}
+
+\markboth{[author withheld] \MakeLowercase{\textit{and}} Singh: Evaluating High-Risk AI for Regulatory Conformity}{[author withheld] \MakeLowercase{\textit{and}} Singh: Evaluating High-Risk AI for Regulatory Conformity}
+
+\maketitle
+
+\begin{abstract}
+High-risk artificial intelligence systems must increasingly demonstrate conformity with
+overlapping governance frameworks---the U.S. NIST AI Risk Management Framework, the EU AI
+Act, and the international standard ISO/IEC~42001---yet these specify \emph{what} must be
+evidenced without prescribing \emph{which} technical evaluations supply that evidence, while
+the AI-evaluation literature develops in isolation from regulatory requirements. This review
+bridges the two. Following a structured, transparent protocol over a verified corpus, we
+organize technical evaluation methods into twelve families and \emph{propose} a
+methods-to-requirements crosswalk that grades, by \emph{technical relevance} (primary,
+supporting, contextual), how each family could support an evidentiary case for each
+requirement of the three frameworks. To our knowledge this is the first crosswalk spanning
+all three simultaneously in the technical literature; we present it as a transparently coded
+artifact---independently sampled by a second coder and recoded by an external reviewer---that
+invites further validation, not a determination of conformity. A coverage-breadth analysis shows that measurable
+trustworthiness characteristics are broadly covered, that one evaluation artifact is often
+relevant across all three frameworks at once, and that process obligations, human-oversight
+effectiveness, and---most critically---the behavior of agentic systems remain weakly
+covered. We translate the crosswalk into a practitioner evidence playbook and a research
+agenda led by action-level evaluation for agents. Cited references and regulatory claims are
+verified against official sources where publicly accessible, and the corpus and crosswalk are released. This review is
+a technical contribution and does not constitute legal advice.
+\end{abstract}
+
+\begin{IEEEkeywords}
+AI governance, AI evaluation, conformity assessment, NIST AI RMF, EU AI Act, ISO/IEC
+42001, responsible AI, AI auditing, AI safety, mapping review.
+\end{IEEEkeywords}
+
+\section{Introduction}\label{sec:intro}
+\input{sec_intro.tex}
+
+\input{sec_background.tex}
+
+\input{sec_related.tex}
+\input{tab_diff.tex}
+
+\section{Methodology}\label{sec:method}
+\input{tab_search.tex}
+\input{tab_incl.tex}
+\begin{figure}[!tbp]\centering\includegraphics[width=\columnwidth]{../figures/fig_prisma.pdf}
+\caption{Record flow of the structured review across the four corpus pools; the
+identifier/citation-verification step is described in Section~\ref{sec:method}, and every
+transition is reconciled in the released ledger. \textbf{Takeaway:} the corpus is deliberately
+focused (152 candidates $\rightarrow$ 141 verified, 11 excluded; 355 records total) but every
+transition is auditable end-to-end.}\label{fig:prisma}\end{figure}
+\input{sec_method.tex}
+
+\section{A Taxonomy of Technical AI Evaluation Methods}\label{sec:taxonomy}
+\input{sec_taxonomy.tex}
+
+\section{Mapping Evaluation Methods to Regulatory Requirements}\label{sec:mapping}
+\begin{figure*}[!tp]\centering\includegraphics[width=0.92\textwidth]{../figures/fig_heatmap.pdf}
+\caption{Heatmap of the proposed crosswalk: technical relevance of each method family (rows)
+for each requirement (columns), grouped by framework. \CIRCLE~primary, \LEFTcircle~supporting,
+\Circle~contextual technical relevance (filled, half-filled, and empty circle, respectively).
+\textbf{Takeaway:} primary-relevance evidence concentrates on the measurable trustworthiness
+characteristics (accuracy, robustness, security, explainability, fairness), while the process,
+human-oversight, and agentic columns are visibly sparse---previewing the gap analysis.}\label{fig:heatmap}\end{figure*}
+\begin{figure*}[!tp]\centering\includegraphics[width=0.82\textwidth]{../figures/fig_crosswalk.pdf}
+\caption{Cross-framework crosswalk: a single evaluation artifact is typically relevant to
+clauses in all three frameworks simultaneously. \textbf{Takeaway:} because one artifact (e.g.,
+an adversarial-robustness report or a model card) evidences NIST, EU, and ISO clauses at once,
+the marginal cost of multi-framework conformity is far below running three separate
+programs.}\label{fig:crosswalk}\end{figure*}
+\input{sec_mapping.tex}
+
+\section{Gap Analysis}\label{sec:gaps}
+\begin{figure*}[!tp]\centering\includegraphics[width=0.92\textwidth]{../figures/fig_gap.pdf}
+\caption{Aggregate coverage of each requirement by technical evaluation methods, colored
+by coverage breadth. Bar height is the aggregate relevance score (primary${=}3$,
+supporting${=}2$, contextual${=}1$, none${=}0$) summed across the twelve method families;
+coverage breadth is set by the count of families with \emph{primary} relevance
+(broad ${\geq}3$, moderate $1$--$2$, narrow $0$). \textbf{Takeaway:} a tall bar shaded
+\emph{narrow} (e.g., NIST \textsc{Govern}, EU Article~9) has ample supporting evidence but
+\emph{no} method of primary relevance---so the real gaps are process obligations,
+human-oversight effectiveness, and agentic behavior, not the measurable
+characteristics.}\label{fig:gap}\end{figure*}
+\input{sec_gaps.tex}
+
+\input{sec_discussion.tex}
+\input{tab_checklist.tex}
+
+\section{Limitations and Threats to Validity}\label{sec:limits}
+\input{sec_limits.tex}
+
+\section{Open Challenges and Future Directions}\label{sec:future}
+\input{sec_future.tex}
+
+\section{Conclusion}\label{sec:conclusion}
+\input{sec_conclusion.tex}
+
+\input{acknowledgment.tex}
+
+\clearpage  % flush any pending floats so no tables/figures trail after the references
+
+\bibliographystyle{IEEEtran}
+\bibliography{../references}
+
+\input{biographies.tex}
+
+\end{document}

@@ -1,0 +1,28 @@
+% T1 — search strategy
+\begin{table}[!tbp]
+\centering
+\caption{Information sources and search strategy. The Boolean template combined system
+terms, evaluation terms, and method terms (Section~\ref{sec:method}); the governance
+string targeted the regulatory literature. Last search: June 2026. The
+database-specific Boolean query strings (term groups defined and substituted per database) are
+released for reproducibility in the companion artifact
+(\texttt{search\_strategy.txt}). \textbf{Takeaway:} the search spans five databases plus
+snowballing and is reproducible---the query strings and dates are released, not just
+summarized.}
+\label{tab:search}
+\footnotesize
+\begin{tabular}{p{0.30\columnwidth}p{0.60\columnwidth}}
+\toprule
+Element & Specification\\
+\midrule
+Databases & IEEE Xplore, ACM Digital Library, Scopus, Web of Science, arXiv (cs.LG, cs.AI, cs.CY, cs.CR, stat.ML)\\
+Snowballing & Forward/backward citation tracing via Google Scholar\\
+Official corpus & NIST AI 100-1, NIST AI 600-1, EUR-Lex Reg. (EU) 2024/1689, ISO/IEC 42001:2023, ISO/IEC 23894:2023\\
+Reused corpus & Authors' prior arXiv-verified agent-fairness corpus (202 entries)\\
+System terms & AI, machine learning, deep learning, LLM, foundation model, AI agent\\
+Evaluation terms & evaluation, assessment, audit, benchmark, testing, assurance, conformity assessment, verification, validation\\
+Method terms & fairness, bias, robustness, adversarial, safety, red-team, interpretability, calibration, uncertainty, data governance, model card, human oversight, monitoring\\
+Window & 2015--2026 (LLM/agentic emphasis 2022--2026); English\\
+\bottomrule
+\end{tabular}
+\end{table}

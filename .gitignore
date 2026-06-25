@@ -1,0 +1,7 @@
+paper_springer/
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+__pycache__/

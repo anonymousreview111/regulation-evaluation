@@ -1,0 +1,73 @@
+Reading the mapping matrix by column rather than by row reveals where the technical
+evaluation literature is rich and where it is thin relative to what the frameworks
+demand. Table~\ref{tab:gap} summarizes the coverage breadth of evidence for each requirement, and
+Fig.~\ref{fig:gap} visualizes the aggregate. We characterize coverage breadth by the
+number of method families with \emph{primary} relevance: \emph{broadly covered} requirements
+have several such families, \emph{moderately covered} ones one or two, and
+\emph{narrowly covered} ones none.
+
+\subsection{Well-served requirements}
+The requirements most tightly coupled to the technical literature are those framed as
+measurable trustworthiness characteristics: accuracy and performance, robustness,
+security, explainability, and fairness. These correspond to NIST \textsc{Measure}~2.x,
+EU AI Act Article~15, and the ISO/IEC~42001 verification-and-validation control. The
+omnibus technical requirements that draw on several method families at once---EU
+Article~15 (accuracy, robustness, and cybersecurity) and ISO/IEC~42001 A.6.2.4
+(verification and validation)---reach the highest evidentiary coverage in our scheme
+(``broad'' in Table~\ref{tab:gap}), while each individual trustworthiness characteristic
+has primary relevance from one or more established method families. For systems built from
+well-studied model classes on tabular or vision data, a deployer can today assemble
+strong conformity evidence for these obligations using off-the-shelf methods.
+
+\subsection{Process obligations: a definitional boundary, not a methods gap}
+A first category is a structural boundary rather than a deficiency in the literature.
+Obligations written as \emph{processes}---NIST \textsc{Govern}, EU AI Act Article~9 (the
+risk-management system), and the ISO/IEC~42001 management-system clauses---are, by design,
+not the kind of thing any single technical evaluation can satisfy. This is not an absence
+of methods: documentation (M8, M9) and monitoring (M11) supply substantial evidence
+\emph{inputs} to these processes, and the matrix records those supporting and primary
+contributions. What process obligations require in addition is an organizational process
+that integrates the technical evidence; the ``gap'' is therefore the need for such
+integration, not missing measurement. We flag this so practitioners do not mistake a strong
+benchmark report for conformity with a process obligation, and we reserve the term
+\emph{gap} (below) for requirements that genuinely lack primary-relevance technical methods.
+
+A second, more troubling gap concerns obligations for which a technical evaluation
+\emph{should} exist but the methods are immature. \emph{Human-oversight effectiveness}
+(EU Article~14) is the clearest case: although a human-in-the-loop is mandated, methods
+for evaluating whether oversight is \emph{effective} (whether humans exhibit automation
+bias, rely appropriately, or can actually intervene) are nascent~\cite{guo2024reliance,%
+chen2024reliancedrills,romeo2025automationbias}. \emph{Record-keeping and logging} (EU
+Article~12) is an engineering capability that, in practice, lacks evaluation methods for
+assessing whether logs are adequate to reconstruct system behavior. \emph{AI impact
+assessment} (ISO/IEC~42001 A.5; EU fundamental-rights impact assessment) has frameworks
+but few standardized, quantitative evaluation instruments.
+
+\subsection{The agentic measurement gap}
+A significant and rapidly growing gap is created by the shift from models to agents.
+Current evaluation methods overwhelmingly grade \emph{outputs}---the text a model emits in
+response to a probe---whereas the risks of autonomous, tool-using systems arise from
+\emph{actions}: which tools are invoked, which sub-agents are delegated to, how a plan
+allocates resources. This is not a speculative concern: independent work shows that a
+system near-parity on a question-answering fairness benchmark can still act with disparity
+when it selects tools or escalates cases~\cite{li2025actions,blankenstein2025biasbusters},
+that agent safety must be assessed over multi-step behavior rather than single
+responses~\cite{zhang2024agent}, and that tool-integrated agents open attack surfaces (e.g.,
+indirect prompt injection) absent in the base model~\cite{greshake2023notwhat}; dedicated
+agent benchmarks are only beginning to appear~\cite{gu2025safesearch,peng2025eu}. Of our
+corpus, only a small number of references evaluate action-level behavior, confirming the
+class is under-covered. A recent framework (citation withheld for double-blind review) offers
+one formalization of this measurement gap (token-level parity coexisting with action-level
+disparity), but the gap stands on the independent evidence above. What is novel here is not
+the individual agent benchmarks, which we cite, but the systematic identification of this
+gap as a \emph{structural} mismatch between frameworks drafted for model-level evaluation
+and the deployment reality of agentic, tool-integrated systems, surfaced by reading the
+cross-framework matrix by column. Because the EU AI Act,
+NIST AI RMF, and ISO/IEC~42001 were drafted with model-centric assessment in mind, their
+requirements are presently evidenced by methods that do not observe the behaviors most
+likely to cause high-risk harm in agentic deployments. Action-level evaluation harnesses,
+trajectory logging tied to the logging obligations, and agentic red-teaming are, on the
+evidence above, the most critical near-term directions for aligning technical evaluation
+with regulatory intent (Section~\ref{sec:future}).
+
+\input{tab_gap.tex}

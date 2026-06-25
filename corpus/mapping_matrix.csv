@@ -1,0 +1,13 @@
+family,GV,MAP,M2.3,M2.6,M2.7,M2.9,M2.10,M2.11,MG,A9,A10,A11,A12,A13,A14,A15,IA5,IA6,IA7,IA8,IA626,IA10
+M1,I,P,D,I,,,,I,P,P,I,P,,P,,D,I,D,I,P,I,I
+M2,I,P,I,P,,,,D,P,P,P,P,,P,I,P,P,P,D,P,P,I
+M3,I,P,P,P,D,,,,P,P,I,P,,I,,D,I,D,I,I,P,
+M4,I,P,I,D,P,,I,I,P,P,,P,,I,P,P,P,D,,P,P,I
+M5,I,P,,P,D,,I,I,P,P,,P,,,I,D,P,D,,I,P,I
+M6,I,I,,I,,D,,P,I,I,,P,,D,P,,I,P,,D,,
+M7,,I,P,P,,I,,,P,P,,P,,P,P,P,I,P,,P,P,
+M8,I,D,I,,,,I,P,I,I,D,P,,P,,P,P,I,D,P,,P
+M9,I,P,I,,,I,I,I,I,I,I,D,I,D,P,,P,I,P,D,I,P
+M10,I,I,,P,,P,,I,P,I,,I,,P,D,,P,P,,P,P,
+M11,I,I,I,P,P,,I,I,P,P,,I,D,I,I,P,P,P,I,I,D,P
+M12,I,P,,I,P,,P,I,P,P,P,P,,P,,P,P,P,P,I,I,I

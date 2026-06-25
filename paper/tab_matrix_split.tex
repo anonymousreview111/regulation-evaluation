@@ -1,0 +1,77 @@
+% Upright mapping matrix (Springer/AIRE; no page rotation). Generated.
+% Split into three independent table floats (one per framework) so each panel places
+% near the text rather than overflowing a single oversized float past the references.
+\begin{table}[!tbp]
+\centering
+\caption{Proposed methods-to-requirements crosswalk (central artifact), Panel~1 of~3: NIST AI RMF. Cells record the authors' interpretive coding of each method family's \emph{technical relevance}: \direct~primary, \partialev~supporting, \indirect~contextual; blank = not applicable. The codes are an engineering judgment grounded in the official clause text, independently sampled by a second coder (Section~\ref{sec:method}); they indicate technical relevance, not a legal determination of conformity. Panels~2--3 (Tables~\ref{tab:matrix-eu}--\ref{tab:matrix-iso}) give the EU AI Act high-risk Articles and the ISO/IEC~42001 Annex~A controls (A.5 assessing impacts; A.6.2.4 verification and validation; A.7 data; A.8 information for interested parties; A.6.2.6 operation and monitoring; A.10 third-party). \textbf{Takeaway:} reading by column, every framework has a few requirements densely served by \direct~primary methods and a few served only by \partialev/\indirect~codes; the latter are the gaps quantified in Table~\ref{tab:gap}.}
+\label{tab:matrix}
+\footnotesize\setlength{\tabcolsep}{3pt}
+\begin{tabular}{p{0.30\textwidth}ccccccccc}
+\toprule
+Method family & \rotatebox{90}{GOVERN} & \rotatebox{90}{MAP} & \rotatebox{90}{ME 2.3} & \rotatebox{90}{ME 2.6} & \rotatebox{90}{ME 2.7} & \rotatebox{90}{ME 2.9} & \rotatebox{90}{ME 2.10} & \rotatebox{90}{ME 2.11} & \rotatebox{90}{MANAGE}\\
+\midrule
+M1 Performance \& benchmarking & \indirect & \partialev & \direct & \indirect &  &  &  & \indirect & \partialev\\
+M2 Fairness \& bias & \indirect & \partialev & \indirect & \partialev &  &  &  & \direct & \partialev\\
+M3 Robustness \& dist.\ shift & \indirect & \partialev & \partialev & \partialev & \direct &  &  &  & \partialev\\
+M4 Safety & \indirect & \partialev & \indirect & \direct & \partialev &  & \indirect & \indirect & \partialev\\
+M5 Red-teaming \& adversarial & \indirect & \partialev &  & \partialev & \direct &  & \indirect & \indirect & \partialev\\
+M6 Interpretability & \indirect & \indirect &  & \indirect &  & \direct &  & \partialev & \indirect\\
+M7 Uncertainty \& calibration &  & \indirect & \partialev & \partialev &  & \indirect &  &  & \partialev\\
+M8 Data quality/docs & \indirect & \direct & \indirect &  &  &  & \indirect & \partialev & \indirect\\
+M9 Transparency \& model docs & \indirect & \partialev & \indirect &  &  & \indirect & \indirect & \indirect & \indirect\\
+M10 Human oversight & \indirect & \indirect &  & \partialev &  & \partialev &  & \indirect & \partialev\\
+M11 Post-deployment monitoring & \indirect & \indirect & \indirect & \partialev & \partialev &  & \indirect & \indirect & \partialev\\
+M12 Privacy evaluation & \indirect & \partialev &  & \indirect & \partialev &  & \partialev & \indirect & \partialev\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[!tbp]
+\centering
+\caption{Proposed crosswalk (continued), Panel~2 of~3: EU AI Act high-risk Articles~9--15. Glyphs as in Table~\ref{tab:matrix} (\direct~primary, \partialev~supporting, \indirect~contextual; blank = not applicable). \textbf{Takeaway:} Article~15 (accuracy/robustness/cybersecurity) is the most densely served by primary-relevance methods, whereas Article~9 (risk management) and Article~12 (logging) are the thinnest---the process obligations.}
+\label{tab:matrix-eu}
+\footnotesize\setlength{\tabcolsep}{3pt}
+\begin{tabular}{p{0.30\textwidth}ccccccc}
+\toprule
+Method family & \rotatebox{90}{Art.\,9} & \rotatebox{90}{Art.\,10} & \rotatebox{90}{Art.\,11} & \rotatebox{90}{Art.\,12} & \rotatebox{90}{Art.\,13} & \rotatebox{90}{Art.\,14} & \rotatebox{90}{Art.\,15}\\
+\midrule
+M1 Performance \& benchmarking & \partialev & \indirect & \partialev &  & \partialev &  & \direct\\
+M2 Fairness \& bias & \partialev & \partialev & \partialev &  & \partialev & \indirect & \partialev\\
+M3 Robustness \& dist.\ shift & \partialev & \indirect & \partialev &  & \indirect &  & \direct\\
+M4 Safety & \partialev &  & \partialev &  & \indirect & \partialev & \partialev\\
+M5 Red-teaming \& adversarial & \partialev &  & \partialev &  &  & \indirect & \direct\\
+M6 Interpretability & \indirect &  & \partialev &  & \direct & \partialev & \\
+M7 Uncertainty \& calibration & \partialev &  & \partialev &  & \partialev & \partialev & \partialev\\
+M8 Data quality/docs & \indirect & \direct & \partialev &  & \partialev &  & \partialev\\
+M9 Transparency \& model docs & \indirect & \indirect & \direct & \indirect & \direct & \partialev & \\
+M10 Human oversight & \indirect &  & \indirect &  & \partialev & \direct & \\
+M11 Post-deployment monitoring & \partialev &  & \indirect & \direct & \indirect & \indirect & \partialev\\
+M12 Privacy evaluation & \partialev & \partialev & \partialev &  & \partialev &  & \partialev\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[!tbp]
+\centering
+\caption{Proposed crosswalk (continued), Panel~3 of~3: ISO/IEC~42001 Annex~A controls. Glyphs as in Table~\ref{tab:matrix} (\direct~primary, \partialev~supporting, \indirect~contextual; blank = not applicable). \textbf{Takeaway:} the verification-and-validation control (A.6.2.4) is evidenced by nearly every method family, while the process controls (A.5 impact assessment, A.10 third-party) draw only supporting/contextual codes.}
+\label{tab:matrix-iso}
+\footnotesize\setlength{\tabcolsep}{3pt}
+\begin{tabular}{p{0.30\textwidth}cccccc}
+\toprule
+Method family & \rotatebox{90}{A.5} & \rotatebox{90}{A.6.2.4} & \rotatebox{90}{A.7} & \rotatebox{90}{A.8} & \rotatebox{90}{A.6.2.6} & \rotatebox{90}{A.10}\\
+\midrule
+M1 Performance \& benchmarking & \indirect & \direct & \indirect & \partialev & \indirect & \indirect\\
+M2 Fairness \& bias & \partialev & \partialev & \direct & \partialev & \partialev & \indirect\\
+M3 Robustness \& dist.\ shift & \indirect & \direct & \indirect & \indirect & \partialev & \\
+M4 Safety & \partialev & \direct &  & \partialev & \partialev & \indirect\\
+M5 Red-teaming \& adversarial & \partialev & \direct &  & \indirect & \partialev & \indirect\\
+M6 Interpretability & \indirect & \partialev &  & \direct &  & \\
+M7 Uncertainty \& calibration & \indirect & \partialev &  & \partialev & \partialev & \\
+M8 Data quality/docs & \partialev & \indirect & \direct & \partialev &  & \partialev\\
+M9 Transparency \& model docs & \partialev & \indirect & \partialev & \direct & \indirect & \partialev\\
+M10 Human oversight & \partialev & \partialev &  & \partialev & \partialev & \\
+M11 Post-deployment monitoring & \partialev & \partialev & \indirect & \indirect & \direct & \partialev\\
+M12 Privacy evaluation & \partialev & \partialev & \partialev & \indirect & \indirect & \indirect\\
+\bottomrule
+\end{tabular}
+\end{table}
