@@ -1,52 +1,85 @@
 # Evaluating High-Risk AI for Regulatory Conformity
 
-Source, data, and build pipeline for the review article *"Evaluating High-Risk AI for
-Regulatory Conformity: A Review of Technical Assessment Methods Mapped to the NIST AI RMF,
-EU AI Act, and ISO/IEC 42001"* (target venue: *Artificial Intelligence Review*, Springer Nature).
+Source, data, and reproducible build pipeline for the review article
 
-The article organizes technical AI-evaluation methods into twelve families and proposes a
-methods-to-requirements **crosswalk** grading, by technical relevance (primary / supporting /
+> **Evaluating High-Risk AI for Regulatory Conformity: A Review of Technical Assessment Methods
+> Mapped to the NIST AI RMF, EU AI Act, and ISO/IEC 42001**
+> Target venue: *Artificial Intelligence Review* (Springer Nature).
+
+The article organizes technical AI-evaluation methods into **twelve families** and proposes a
+methods-to-requirements **crosswalk** that grades, by technical relevance (primary / supporting /
 contextual), how each family can supply evidence for each requirement of the three frameworks,
-plus a gap analysis and a practitioner evidence playbook.
+followed by a gap analysis and a practitioner evidence playbook. Every cell is grounded in the
+official clause text; the corpus, crosswalk, and coding/validation ledgers are released here for
+full reproducibility.
 
-## Repository layout
-- **`paper/`** — canonical LaTeX source: `main.tex` (content master) + `sec_*.tex` sections +
-  `tab_*.tex` tables. (The Springer manuscript is generated from these; see below.)
-- **`references.bib`** — bibliography (style: `sn-apacite`).
-- **`corpus/`** — released data: the crosswalk (`mapping_matrix.csv`), method index
-  (`method_index.csv`), gap analysis (`gap_analysis.csv`), second-coder ledger
-  (`coding_audit.csv`), independent external-validation ledger (`external_validation.csv`),
-  reused fairness corpus (`seed_fairness_corpus.bib`), search strategy (`search_strategy.txt`),
-  regulatory clause anchors (`regulatory_clauses.json`), and the validation instrument
-  (`validator_sheet.csv`). See `corpus/README_SI.md`.
-- **`figures/`** — generated figures (PRISMA flow, heatmap, cross-framework, gap).
-- **`springer_template/`** — Springer Nature `sn-jnl` class and style files.
-- **`tools/`** — the build/QA pipeline (see below).
-
-## Build (MiKTeX + Python via Anaconda)
-Primary path — assemble and compile the Springer manuscript from the committed `paper/` sources:
+## Repository structure
 ```
-python tools/make_figures.py        # regenerate the figures from the corpus CSVs
-python tools/build_springer.py      # assemble the manuscript into paper_springer/
-cd paper_springer && pdflatex main && bibtex main && pdflatex main && pdflatex main
-python tools/make_packages.py       # build the Overleaf upload + Supplementary Information zips
+.
+├── README.md                  this file
+├── references.bib             bibliography (sn-apacite style)
+├── paper/                     canonical LaTeX source
+│   ├── main.tex               content master (abstract + body + \input order)
+│   ├── sec_*.tex              section sources
+│   └── tab_*.tex              table sources (hand-finalized captions/takeaways)
+├── corpus/                    released data (see corpus/README_SI.md)
+├── figures/                   generated figures (PRISMA, heatmap, cross-framework, gap)
+├── springer_template/         Springer sn-jnl class + sn-apacite + support .sty
+├── tools/                     build & analysis pipeline (see tools/README.md)
+└── docs/                      protocol documentation (validation protocol)
 ```
-`paper_springer/` and `dist/` are generated artifacts (git-ignored).
+`paper_springer/` (assembled manuscript) and `dist/` (zips, anon mirror) are generated and
+git-ignored.
 
-Data regenerators (optional; the `paper/tab_*.tex` files have hand-finalized captions/takeaways,
-so re-running these overwrites those and the base tables must be re-finalized):
-`tools/build_matrix.py` (crosswalk CSVs + base matrix/gap tables) and
-`tools/make_matrix_split.py` (the upright 3-panel Springer matrix).
-For a double-blind anonymized Supplementary Information bundle, use `tools/make_anon_si.py`.
+## Reproduce the manuscript
+Requires MiKTeX (LaTeX) and Python via Anaconda (`matplotlib` for figures).
+```bash
+python tools/make_figures.py          # figures from corpus CSVs
+python tools/build_springer.py        # assemble paper_springer/ from paper/ + template + bib
+cd paper_springer
+pdflatex main && bibtex main && pdflatex main && pdflatex main
+```
+The result is the ~57-page Springer manuscript. `python tools/make_packages.py` builds the
+Overleaf upload and the Supplementary Information deposit. See **`tools/README.md`** for the full
+pipeline and the optional data regenerators.
 
-## Reliability / validation
+## Corpus / data dictionary
+The released data lives in `corpus/` and is documented in `corpus/README_SI.md`. Highlights:
+- `mapping_matrix.csv` — the methods × requirements crosswalk (the central artifact).
+- `method_index.csv` — the twelve method families and their representative methods.
+- `gap_analysis.csv` — aggregate coverage per requirement and the principal gaps.
+- `coding_audit.csv` — second-coder reliability ledger.
+- `external_validation.csv` — external-validation ledger (an external validator, not an author,
+  blind to the first-pass codes, recoded a stratified sample).
+- `search_strategy.txt` — per-database Boolean search strings and dates.
+- `regulatory_clauses.json` — the official NIST / EU / ISO clause anchors used for grounding.
+- `seed_fairness_corpus.bib` — the reused, previously verified fairness corpus.
+
+## Reliability & external validation
 The crosswalk codes were independently second-coded by a co-author and externally recoded by an
-independent reviewer (not an author), blind to the first-pass codes. Agreement statistics
-(Cohen's and quadratically-weighted κ) are reported in the methodology and released in
-`corpus/coding_audit.csv` and `corpus/external_validation.csv`.
+**external validator** (not an author of this study), blind to the first-pass codes. Cohen's and
+quadratically-weighted κ are reported in the methodology and released in `corpus/coding_audit.csv`
+and `corpus/external_validation.csv`. The validation instrument and protocol are in
+`docs/VALIDATION_PROTOCOL.md`.
 
 ## Data availability
 The corpus, crosswalk, search strings, and coding/validation ledgers are archived at Zenodo
 (version DOI `[DOI withheld for double-blind review]`; concept DOI `[DOI withheld for double-blind review]`).
 
+## Citation
+```bibtex
+@article{conformity2026review,
+  title   = {Evaluating High-Risk AI for Regulatory Conformity: A Review of Technical
+             Assessment Methods Mapped to the NIST AI RMF, EU AI Act, and ISO/IEC 42001},
+  author  = {[author withheld] and [author withheld]},
+  journal = {Artificial Intelligence Review (under review)},
+  year    = {2026}
+}
+```
+
+## License
+The corpus and code are released for academic reuse; please cite the paper. (A formal `LICENSE`
+file can be added on request — e.g. CC BY 4.0 for the data/text and MIT for the scripts.)
+
+---
 This review is a technical contribution and does **not** constitute legal advice.
